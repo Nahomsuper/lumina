@@ -500,22 +500,22 @@
 
 <header>
     <div class="header-inner">
-        <a href="lumina.html" class="logo-mark" style="text-decoration:none;">
+        <a href="index.html" class="logo-mark" style="text-decoration:none;">
             <div class="logo-icon"><i class="fa-solid fa-star-of-life"></i></div>
             <div>
                 <span class="logo-text">Premium Brands</span>
-                <span class="logo-sub" id="storeSub">Five Exceptional Brands, One Destination</span>
+                <span class="logo-sub" id="storeSub" data-lang="logo-sub">Five Exceptional Brands, One Destination</span>
             </div>
         </a>
 
         <nav>
-            <a href="lumina.html">Home</a>
-            <a href="lumina.html#brands">Brands</a>
-            <a href="lumina.html#catalog">Catalog</a>
-            <a href="lumina.html#stories">Collection</a>
-            <a href="about.html" class="active">About</a>
-            <a href="lumina.html#contact">Contact</a>
-            <a href="blog.html">Blog</a>
+            <a href="index.html" data-lang="nav-home">Home</a>
+            <a href="index.html#brands" data-lang="nav-brands">Brands</a>
+            <a href="index.html#catalog" data-lang="nav-catalog">Catalog</a>
+            <a href="index.html#stories" data-lang="nav-collection">Collection</a>
+            <a href="about.html" class="active" data-lang="nav-about">About</a>
+            <a href="index.html#contact" data-lang="nav-contact">Contact</a>
+            <a href="blog.html" data-lang="nav-blog">Blog</a>
         </nav>
 
         <div class="header-actions">
@@ -526,26 +526,26 @@
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="cart-badge" id="cartBadge">0</span>
             </button>
-            <button class="btn-pill filled" id="authBtn"><span id="authBtnLabel">Login</span></button>
+            <button class="btn-pill filled" id="authBtn"><span id="authBtnLabel" data-lang="auth-login">Login</span></button>
         </div>
     </div>
 </header>
 
 <div id="mobileNav" class="mobile-nav" style="display:none;">
-    <a href="lumina.html" onclick="closeMobile()">Home</a>
-    <a href="lumina.html#brands" onclick="closeMobile()">Our Brands</a>
-    <a href="lumina.html#catalog" onclick="closeMobile()">Catalog</a>
-    <a href="lumina.html#stories" onclick="closeMobile()">Collection</a>
-    <a href="about.html" class="active" onclick="closeMobile()">About</a>
-    <a href="lumina.html#contact" onclick="closeMobile()">Contact</a>
-    <a href="blog.html" onclick="closeMobile()">Blog</a>
+    <a href="index.html" onclick="closeMobile()" data-lang="nav-home">Home</a>
+    <a href="index.html#brands" onclick="closeMobile()" data-lang="nav-brands">Our Brands</a>
+    <a href="index.html#catalog" onclick="closeMobile()" data-lang="nav-catalog">Catalog</a>
+    <a href="index.html#stories" onclick="closeMobile()" data-lang="nav-collection">Collection</a>
+    <a href="about.html" class="active" onclick="closeMobile()" data-lang="nav-about">About</a>
+    <a href="index.html#contact" onclick="closeMobile()" data-lang="nav-contact">Contact</a>
+    <a href="blog.html" onclick="closeMobile()" data-lang="nav-blog">Blog</a>
 </div>
 
 <section class="about-hero">
     <div>
-        <p class="about-hero-eyebrow">Our Story</p>
-        <h1>About Our <em>Premium Hub</em></h1>
-        <p>Premium Brands Collection is a carefully curated marketplace that brings together five exceptional Ethiopian brands — each a master of its craft. From ambient lighting to cold-pressed wellness, artisanal leather to gourmet foods and natural hair care, we celebrate craftsmanship, authenticity, and conscious living.</p>
+        <p class="about-hero-eyebrow" data-lang="ab-hero-eyebrow">Our Story</p>
+        <h1 data-lang="ab-hero-title">About Our <em>Premium Hub</em></h1>
+        <p data-lang="ab-hero-desc">Premium Brands Collection is a carefully curated marketplace that brings together five exceptional Ethiopian brands — each a master of its craft. From ambient lighting to cold-pressed wellness, artisanal leather to gourmet foods and natural hair care, we celebrate craftsmanship, authenticity, and conscious living.</p>
     </div>
 </section>
 
@@ -559,13 +559,13 @@
         <div class="mission-grid">
             <div class="mission-card">
                 <i class="fa-solid fa-bullseye"></i>
-                <h3>Our Mission</h3>
-                <p>To bridge the gap between exceptional Ethiopian craftsmanship and the modern consumer by providing a unified platform where quality, sustainability, and authenticity converge. We empower local artisans and brands to reach discerning customers who value integrity and excellence.</p>
+                <h3 data-lang="ab-mission-title">Our Mission</h3>
+                <p data-lang="ab-mission-desc">To bridge the gap between exceptional Ethiopian craftsmanship and the modern consumer by providing a unified platform where quality, sustainability, and authenticity converge. We empower local artisans and brands to reach discerning customers who value integrity and excellence.</p>
             </div>
             <div class="mission-card">
                 <i class="fa-solid fa-eye"></i>
-                <h3>Our Vision</h3>
-                <p>To become Ethiopia's most trusted multi-brand destination for premium lifestyle products — recognised globally for our commitment to ethical sourcing, artisan empowerment, and uncompromising quality across every category we serve.</p>
+                <h3 data-lang="ab-vision-title">Our Vision</h3>
+                <p data-lang="ab-vision-desc">To become Ethiopia's most trusted multi-brand destination for premium lifestyle products — recognised globally for our commitment to ethical sourcing, artisan empowerment, and uncompromising quality across every category we serve.</p>
             </div>
         </div>
     </div>
@@ -574,35 +574,35 @@
 <section class="section" style="background:var(--ivory);padding-top:5rem;padding-bottom:5rem;">
     <div class="container">
         <div class="section-header">
-            <h2>Our Core Values</h2>
+            <h2 data-lang="ab-values-title">Our Core Values</h2>
             <div class="divider"></div>
-            <p>Principles that guide everything we do</p>
+            <p data-lang="ab-values-sub">Principles that guide everything we do</p>
         </div>
         <div class="values-grid">
             <div class="value-card">
                 <i class="fa-solid fa-shield-halved"></i>
-                <h4>Authenticity</h4>
-                <p>Every product tells a genuine story. We source directly from makers who share our commitment to transparency and honest craftsmanship.</p>
+                <h4 data-lang="ab-val1-title">Authenticity</h4>
+                <p data-lang="ab-val1-desc">Every product tells a genuine story. We source directly from makers who share our commitment to transparency and honest craftsmanship.</p>
             </div>
             <div class="value-card">
                 <i class="fa-solid fa-leaf"></i>
-                <h4>Sustainability</h4>
-                <p>We champion eco-conscious production, ethical material sourcing, and practices that respect both people and the planet.</p>
+                <h4 data-lang="ab-val2-title">Sustainability</h4>
+                <p data-lang="ab-val2-desc">We champion eco-conscious production, ethical material sourcing, and practices that respect both people and the planet.</p>
             </div>
             <div class="value-card">
                 <i class="fa-solid fa-hands-holding"></i>
-                <h4>Artisan Empowerment</h4>
-                <p>We invest in local makers, providing fair compensation and a global stage for their extraordinary skills and traditions.</p>
+                <h4 data-lang="ab-val3-title">Artisan Empowerment</h4>
+                <p data-lang="ab-val3-desc">We invest in local makers, providing fair compensation and a global stage for their extraordinary skills and traditions.</p>
             </div>
             <div class="value-card">
                 <i class="fa-solid fa-award"></i>
-                <h4>Quality</h4>
-                <p>Every product in our collection meets rigorous standards. We never compromise on the integrity of what we offer.</p>
+                <h4 data-lang="ab-val4-title">Quality</h4>
+                <p data-lang="ab-val4-desc">Every product in our collection meets rigorous standards. We never compromise on the integrity of what we offer.</p>
             </div>
             <div class="value-card">
                 <i class="fa-solid fa-heart"></i>
-                <h4>Customer Focus</h4>
-                <p>Our community comes first. We listen, adapt, and deliver experiences that exceed expectations at every touchpoint.</p>
+                <h4 data-lang="ab-val5-title">Customer Focus</h4>
+                <p data-lang="ab-val5-desc">Our community comes first. We listen, adapt, and deliver experiences that exceed expectations at every touchpoint.</p>
             </div>
         </div>
     </div>
@@ -611,28 +611,28 @@
 <section class="brand-showcase">
     <div class="container">
         <div class="divider"></div>
-        <h2>Our Brand Family</h2>
-        <p>Five distinct voices — one shared philosophy of excellence. Each brand in our portfolio represents a unique craft, united by a common dedication to quality, heritage, and innovation.</p>
+        <h2 data-lang="ab-family-title">Our Brand Family</h2>
+        <p data-lang="ab-family-desc">Five distinct voices — one shared philosophy of excellence. Each brand in our portfolio represents a unique craft, united by a common dedication to quality, heritage, and innovation.</p>
         <div class="brand-logos">
             <div class="brand-logo-item">
                 <i class="fa-solid fa-lightbulb"></i>
-                <span>Lumina<br>Lighting</span>
+                <span data-lang="ab-fam1">Lumina<br>Lighting</span>
             </div>
             <div class="brand-logo-item">
                 <i class="fa-solid fa-bottle-droplet"></i>
-                <span>PureSip<br>Wellness</span>
+                <span data-lang="ab-fam2">PureSip<br>Wellness</span>
             </div>
             <div class="brand-logo-item">
                 <i class="fa-solid fa-bag-shopping"></i>
-                <span>Artisan<br>Leather</span>
+                <span data-lang="ab-fam3">Artisan<br>Leather</span>
             </div>
             <div class="brand-logo-item">
                 <i class="fa-solid fa-jar"></i>
-                <span>Earth &amp; Oven<br>Gourmet</span>
+                <span data-lang="ab-fam4">Earth &amp; Oven<br>Gourmet</span>
             </div>
             <div class="brand-logo-item">
                 <i class="fa-solid fa-spa"></i>
-                <span>Elara Hair<br>Care</span>
+                <span data-lang="ab-fam5">Elara Hair<br>Care</span>
             </div>
         </div>
     </div>
@@ -641,15 +641,15 @@
 <section id="contact" class="section" style="background:var(--warm);">
     <div class="container">
         <div class="section-header">
-            <h2>Let's Connect</h2>
+            <h2 data-lang="contact-title">Let's Connect</h2>
             <div class="divider"></div>
-            <p>Reach our master inquiry office</p>
+            <p data-lang="contact-sub">Reach our master inquiry office</p>
         </div>
         <div class="contact-grid">
             <div>
                 <h3 style="font-size:1.4rem;font-weight:400;font-style:italic;margin-bottom:1.5rem;">Get in Touch</h3>
-                <div class="contact-info-row"><i class="fa-solid fa-phone"></i> +251 911 000 000</div>
-                <div class="contact-info-row"><i class="fa-solid fa-envelope"></i> hello@premiumbrands.et</div>
+                <div class="contact-info-row"><i class="fa-solid fa-phone"></i> +251716501961</div>
+                <div class="contact-info-row"><i class="fa-solid fa-envelope"></i> betiqiyas@gmail.com</div>
                 <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.premiumbrands.et</div>
                 <div style="margin-top:2rem;">
                     <p style="font-size:.75rem;color:var(--mid);line-height:1.8;">Follow our journey on social media. Discover behind-the-scenes stories, product launches, and exclusive collaborations with our community of artisans and designers.</p>
@@ -657,43 +657,43 @@
             </div>
             <div class="contact-form">
                 <div class="form-field">
-                    <label>Full Name</label>
+                    <label data-lang="contact-name">Full Name</label>
                     <input type="text" placeholder="Your name">
                 </div>
                 <div class="form-field">
-                    <label>Email Address</label>
+                    <label data-lang="contact-email">Email Address</label>
                     <input type="email" placeholder="your@email.com">
                 </div>
                 <div class="form-field">
-                    <label>Message</label>
+                    <label data-lang="contact-msg">Message</label>
                     <textarea placeholder="Tell us about your inquiry…"></textarea>
                 </div>
-                <button class="btn-pill filled" onclick="alert('Inquiry sent successfully!')">Send Message</button>
+                <button class="btn-pill filled" onclick="alert('Inquiry sent successfully!')" data-lang="contact-send">Send Message</button>
             </div>
         </div>
     </div>
 </section>
 
 <footer>
-    <p class="footer-brands">Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</p>
-    <p>&copy; 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination</p>
+    <p class="footer-brands" data-lang="footer-brands">Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</p>
+    <p data-lang="footer-copy">© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination</p>
 </footer>
 
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
-        <h3>Your Order</h3>
+        <h3 data-lang="cart-title">Your Order</h3>
         <button class="btn-icon" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="cart-body" id="cartBody">
-        <div class="cart-empty" id="cartEmpty">Your basket is empty.</div>
+        <div class="cart-empty" id="cartEmpty" data-lang="cart-empty">Your basket is empty.</div>
     </div>
     <div class="cart-footer">
         <div class="cart-total-row">
-            <span class="cart-total-label">Total</span>
+            <span class="cart-total-label" data-lang="cart-total">Total</span>
             <span class="cart-total-amount" id="cartTotal">0 ETB</span>
         </div>
-        <button class="btn-pill filled" style="width:100%;padding:14px;" onclick="alert('Order confirmed for dispatch!')">Confirm Order</button>
+        <button class="btn-pill filled" style="width:100%;padding:14px;" onclick="alert('Order confirmed for dispatch!')" data-lang="cart-checkout">Confirm Order</button>
     </div>
 </div>
 
@@ -751,17 +751,86 @@
             document.body.classList.contains('dark') ? 'fa-regular fa-sun' : 'fa-regular fa-moon';
     });
 
-    const langMap = {
-        EN: { sub: 'Five Exceptional Brands, One Destination', login: 'Login', btn: 'AM' },
-        AM: { sub: 'አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ', login: 'ግባ', btn: 'EN' }
+    const translations = {
+        en: {
+            "logo-sub": "Five Exceptional Brands, One Destination",
+            "nav-home": "Home", "nav-brands": "Brands", "nav-catalog": "Catalog", "nav-collection": "Collection",
+            "nav-about": "About", "nav-contact": "Contact", "nav-blog": "Blog",
+            "auth-login": "Login", "lang-btn": "AM",
+            "cart-title": "Your Order", "cart-empty": "Your basket is empty.", "cart-total": "Total", "cart-checkout": "Confirm Order",
+            "ab-hero-eyebrow": "Our Story",
+            "ab-hero-title": "About Our <em>Premium Hub</em>",
+            "ab-hero-desc": "Premium Brands Collection is a carefully curated marketplace that brings together five exceptional Ethiopian brands — each a master of its craft. From ambient lighting to cold-pressed wellness, artisanal leather to gourmet foods and natural hair care, we celebrate craftsmanship, authenticity, and conscious living.",
+            "ab-mission-title": "Our Mission",
+            "ab-mission-desc": "To bridge the gap between exceptional Ethiopian craftsmanship and the modern consumer by providing a unified platform where quality, sustainability, and authenticity converge. We empower local artisans and brands to reach discerning customers who value integrity and excellence.",
+            "ab-vision-title": "Our Vision",
+            "ab-vision-desc": "To become Ethiopia most trusted multi-brand destination for premium lifestyle products — recognised globally for our commitment to ethical sourcing, artisan empowerment, and uncompromising quality across every category we serve.",
+            "ab-values-title": "Our Core Values",
+            "ab-values-sub": "Principles that guide everything we do",
+            "ab-val1-title": "Authenticity", "ab-val1-desc": "Every product tells a genuine story. We source directly from makers who share our commitment to transparency and honest craftsmanship.",
+            "ab-val2-title": "Sustainability", "ab-val2-desc": "We champion eco-conscious production, ethical material sourcing, and practices that respect both people and the planet.",
+            "ab-val3-title": "Artisan Empowerment", "ab-val3-desc": "We invest in local makers, providing fair compensation and a global stage for their extraordinary skills and traditions.",
+            "ab-val4-title": "Quality", "ab-val4-desc": "Every product in our collection meets rigorous standards. We never compromise on the integrity of what we offer.",
+            "ab-val5-title": "Customer Focus", "ab-val5-desc": "Our community comes first. We listen, adapt, and deliver experiences that exceed expectations at every touchpoint.",
+            "ab-family-title": "Our Brand Family",
+            "ab-family-desc": "Five distinct voices — one shared philosophy of excellence. Each brand in our portfolio represents a unique craft, united by a common dedication to quality, heritage, and innovation.",
+            "ab-fam1": "Lumina<br>Lighting", "ab-fam2": "PureSip<br>Wellness", "ab-fam3": "Artisan<br>Leather", "ab-fam4": "Earth &amp; Oven<br>Gourmet", "ab-fam5": "Elara Hair<br>Care",
+            "contact-title": "Let's Connect", "contact-sub": "Reach our master inquiry office",
+            "contact-name": "Full Name", "contact-email": "Email Address", "contact-msg": "Message",
+            "contact-send": "Send Message",
+            "footer-brands": "Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair",
+            "footer-copy": "© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination"
+        },
+        am: {
+            "logo-sub": "አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ",
+            "nav-home": "መነሻ", "nav-brands": "ብራንዶች", "nav-catalog": "ካታሎግ", "nav-collection": "ስብስብ",
+            "nav-about": "ስለ እኛ", "nav-contact": "ግንኙነት", "nav-blog": "ብሎግ",
+            "auth-login": "ግባ", "lang-btn": "EN",
+            "cart-title": "ትዕዛዝህ", "cart-empty": "ቅርጫትህ ባዶ ነው።", "cart-total": "ጠቅላላ", "cart-checkout": "ትእዛዝ አረጋግጥ",
+            "ab-hero-eyebrow": "ታሪካችን",
+            "ab-hero-title": "ስለ ፕሪሚየም <em>ሀብታችን</em>",
+            "ab-hero-desc": "ፕሪሚየም ብራንዶች ስብስብ አምስት ልዩ የኢትዮጵያ ብራንዶችን የሚያሰባስብ በጥንቃቄ የተዘጋጀ የገበያ ቦታ ነው። የእጅ ስራን፣ ትክክለኛነትን እና ንቁ አኗኗርን እናከብራለን።",
+            "ab-mission-title": "ተልዕኳችን",
+            "ab-mission-desc": "ልዩ የኢትዮጵያ የእጅ ስራ እና ዘመናዊ ሸማች መካከል ያለውን ልዩነት ማስተካከል። የአካባቢ የእጅ ባለሙያዎችን እና ብራንዶችን ማበረታታት።",
+            "ab-vision-title": "ራዕያችን",
+            "ab-vision-desc": "ለፕሪሚየም የአኗኗር ዘይቤ ምርቶች የኢትዮጵያ በጣም ታማኝ የመልቲ-ብራንድ መዳረሻ ለመሆን።",
+            "ab-values-title": "ዋና እሴቶቻችን",
+            "ab-values-sub": "ሁሉንም ነገር የሚመሩ መርሆች",
+            "ab-val1-title": "ትክክለኛነት", "ab-val1-desc": "እያንዳንዱ ምርት እውነተኛ ታሪክ ይናገራል። ከራሳቸው ሰሪዎች በቀጥታ እናመጣለን።",
+            "ab-val2-title": "ዘላቂነት", "ab-val2-desc": "�አካባቢ ተስማሚ ምርትን እንደግፋለን።",
+            "ab-val3-title": "የእጅ ባለሙያ ማበረታቻ", "ab-val3-desc": "በአካባቢው ሰሪዎች ላይ ኢንቨስት እናደርጋለን።",
+            "ab-val4-title": "ጥራት", "ab-val4-desc": "በስብስባችን ውስጥ ያለ እያንዳንዱ ምርት ጥብቅ መስፈርቶችን ያሟላል።",
+            "ab-val5-title": "ደንበኛ ትኩረት", "ab-val5-desc": "ማህበረሰባችን ቀዳሚ ነው። እናዳምጣለን፣ እንለማመዳለን።",
+            "ab-family-title": "የብራንድ ቤተሰባችን",
+            "ab-family-desc": "አምስት የተለያዩ ድምጾች — አንድ የልህቀት ፍልስፍና። እያንዳንዱ ብራንድ ልዩ የእጅ ስራን ይወክላል።",
+            "ab-fam1": "ሉሚና<br>መብራት", "ab-fam2": "ፒውርሲፕ<br>ጤና", "ab-fam3": "አርቲዛን<br>ቆዳ", "ab-fam4": "ኤርት ኤንድ ኦቨን<br>ምግብ", "ab-fam5": "ኤላራ<br>ፀጉር",
+            "contact-title": "ያነጋግሩን", "contact-sub": "ዋና መጠይቅ ቢሮአችንን ያግኙ",
+            "contact-name": "ሙሉ ስም", "contact-email": "ኢሜይል አድራሻ", "contact-msg": "መልእክት",
+            "contact-send": "መልእክት ላክ",
+            "footer-brands": "ሉሚና · ፒውርሲፕ · አርቲዛን ሌዘር · ኤርት ኤንድ ኦቨን · ኤላራ ፀጉር",
+            "footer-copy": "© 2026 ፕሪሚየም ብራንዶች ስብስብ · ኢትዮጵያ · አምስት ልዩ ብራንዶች፣ አንድ መድረሻ"
+        }
     };
-    let lang = 'EN';
-    document.getElementById('langBtn').addEventListener('click', () => {
-        lang = lang === 'EN' ? 'AM' : 'EN';
-        document.getElementById('storeSub').textContent    = langMap[lang].sub;
-        document.getElementById('authBtnLabel').textContent = langMap[lang].login;
-        document.getElementById('langBtn').textContent     = langMap[lang].btn;
-    });
+    let currentLang = localStorage.getItem('premium_lang') || 'en';
+
+    function applyLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('premium_lang', lang);
+        document.getElementById('langBtn').textContent = lang === 'en' ? 'AM' : 'EN';
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+    }
+
+    function switchLanguage() {
+        applyLanguage(currentLang === 'en' ? 'am' : 'en');
+    }
+
+    document.getElementById('langBtn').addEventListener('click', switchLanguage);
+    applyLanguage(currentLang);
 
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
