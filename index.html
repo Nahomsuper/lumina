@@ -822,22 +822,22 @@
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header>
     <div class="header-inner">
-        <div class="logo-mark">
+        <a href="index.html" class="logo-mark" style="text-decoration:none;">
             <div class="logo-icon"><i class="fa-solid fa-star-of-life"></i></div>
             <div>
                 <span class="logo-text">Premium Brands</span>
-                <span class="logo-sub" id="storeSub">Five Exceptional Brands, One Destination</span>
+                <span class="logo-sub" id="storeSub" data-lang="logo-sub">Five Exceptional Brands, One Destination</span>
             </div>
-        </div>
+        </a>
 
         <nav>
-            <a href="lumina.html">Home</a>
-            <a href="lumina.html#brands">Brands</a>
-            <a href="lumina.html#catalog">Catalog</a>
-            <a href="lumina.html#stories">Collection</a>
-            <a href="about.html">About</a>
-            <a href="lumina.html#contact">Contact</a>
-            <a href="blog.html">Blog</a>
+            <a href="index.html" data-lang="nav-home">Home</a>
+            <a href="index.html#brands" data-lang="nav-brands">Brands</a>
+            <a href="index.html#catalog" data-lang="nav-catalog">Catalog</a>
+            <a href="index.html#stories" data-lang="nav-collection">Collection</a>
+            <a href="about.html" data-lang="nav-about">About</a>
+            <a href="index.html#contact" data-lang="nav-contact">Contact</a>
+            <a href="blog.html" data-lang="nav-blog">Blog</a>
         </nav>
 
         <div class="header-actions">
@@ -848,39 +848,39 @@
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="cart-badge" id="cartBadge">0</span>
             </button>
-            <button class="btn-pill filled" id="authBtn"><span id="authBtnLabel">Login</span></button>
+            <button class="btn-pill filled" id="authBtn"><span id="authBtnLabel" data-lang="auth-login">Login</span></button>
         </div>
     </div>
 </header>
 
 <div id="mobileNav" class="mobile-nav" style="display:none;">
-    <a href="lumina.html" onclick="closeMobile()">Home</a>
-    <a href="lumina.html#brands" onclick="closeMobile()">Our Brands</a>
-    <a href="lumina.html#catalog" onclick="closeMobile()">Catalog</a>
-    <a href="lumina.html#stories" onclick="closeMobile()">Collection</a>
-    <a href="about.html" onclick="closeMobile()">About</a>
-    <a href="lumina.html#contact" onclick="closeMobile()">Contact</a>
-    <a href="blog.html" onclick="closeMobile()">Blog</a>
+    <a href="index.html" onclick="closeMobile()" data-lang="nav-home">Home</a>
+    <a href="index.html#brands" onclick="closeMobile()" data-lang="nav-brands">Our Brands</a>
+    <a href="index.html#catalog" onclick="closeMobile()" data-lang="nav-catalog">Catalog</a>
+    <a href="index.html#stories" onclick="closeMobile()" data-lang="nav-collection">Collection</a>
+    <a href="about.html" onclick="closeMobile()" data-lang="nav-about">About</a>
+    <a href="index.html#contact" onclick="closeMobile()" data-lang="nav-contact">Contact</a>
+    <a href="blog.html" onclick="closeMobile()" data-lang="nav-blog">Blog</a>
 </div>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section id="hero" class="hero">
     <div>
-        <p class="hero-eyebrow">Curated · Authentic · Ethiopian</p>
-        <h1>Four Exceptional Brands,<br><em>One Destination</em></h1>
-        <p class="hero-desc">Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.</p>
+        <p class="hero-eyebrow" data-lang="hero-eyebrow">Curated · Authentic · Ethiopian</p>
+        <h1 data-lang="hero-title">Four Exceptional Brands,<br><em>One Destination</em></h1>
+        <p class="hero-desc" data-lang="hero-desc">Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.</p>
 
         <div class="hero-brand-strip">
-            <span class="hero-brand-chip">Lumina</span>
-            <span class="hero-brand-chip">PureSip</span>
-            <span class="hero-brand-chip">Artisan Leather</span>
-            <span class="hero-brand-chip">Earth & Oven</span>
-            <span class="hero-brand-chip">Elara Hair</span>
+            <span class="hero-brand-chip" data-lang="chip-lumina">Lumina</span>
+            <span class="hero-brand-chip" data-lang="chip-puresip">PureSip</span>
+            <span class="hero-brand-chip" data-lang="chip-leather">Artisan Leather</span>
+            <span class="hero-brand-chip" data-lang="chip-earthoven">Earth & Oven</span>
+            <span class="hero-brand-chip" data-lang="chip-elara">Elara Hair</span>
         </div>
 
         <div class="hero-ctas">
-            <a href="#catalog" class="btn-pill filled">Explore Catalog</a>
-            <a href="#brands" class="btn-pill">Meet the Brands</a>
+            <a href="#catalog" class="btn-pill filled" data-lang="hero-cta-1">Explore Catalog</a>
+            <a href="#brands" class="btn-pill" data-lang="hero-cta-2">Meet the Brands</a>
         </div>
     </div>
 </section>
@@ -889,56 +889,56 @@
 <section id="brands" class="section" style="padding-top:5rem;padding-bottom:5rem;">
     <div class="container">
         <div class="section-header">
-            <h2>Our Brand Portfolio</h2>
+            <h2 data-lang="brands-title">Our Brand Portfolio</h2>
             <div class="divider"></div>
-            <p>Five brands · One shared philosophy of quality</p>
+            <p data-lang="brands-sub">Five brands · One shared philosophy of quality</p>
         </div>
 
         <div class="brands-grid">
 
             <div class="brand-card">
-                <div class="brand-number">01 / 05</div>
+                <div class="brand-number" data-lang="b01-num">01 / 05</div>
                 <div class="brand-icon bg-lumina accent-lumina"><i class="fa-solid fa-lightbulb"></i></div>
-                <h3 class="accent-lumina">Lumina</h3>
-                <span class="brand-tag">Lighting · Presented by Betelihem Getaneh</span>
-                <p>Shaping moods through mindful design and sustainability — where light becomes an immersive experience. Architectural fixtures crafted for the modern interior.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Lumina')">View Collection →</a>
+                <h3 class="accent-lumina" data-lang="b01-name">Lumina</h3>
+                <span class="brand-tag" data-lang="b01-tag">Lighting · Presented by Betelihem Getaneh</span>
+                <p data-lang="b01-desc">Shaping moods through mindful design and sustainability — where light becomes an immersive experience. Architectural fixtures crafted for the modern interior.</p>
+                <a href="#catalog" class="brand-link" onclick="filterBrand('Lumina')" data-lang="b01-link">View Collection →</a>
             </div>
 
             <div class="brand-card">
-                <div class="brand-number">02 / 05</div>
+                <div class="brand-number" data-lang="b02-num">02 / 05</div>
                 <div class="brand-icon bg-puresip accent-puresip"><i class="fa-solid fa-bottle-droplet"></i></div>
-                <h3 class="accent-puresip">PureSip</h3>
-                <span class="brand-tag">Cold-Pressed Juices · reallygreatsip.com</span>
-                <p>A refreshing natural journey. 100% organic fruits, zero additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('PureSip')">View Elixirs →</a>
+                <h3 class="accent-puresip" data-lang="b02-name">PureSip</h3>
+                <span class="brand-tag" data-lang="b02-tag">Cold-Pressed Juices · reallygreatsip.com</span>
+                <p data-lang="b02-desc">A refreshing natural journey. 100% organic fruits, zero additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants.</p>
+                <a href="#catalog" class="brand-link" onclick="filterBrand('PureSip')" data-lang="b02-link">View Elixirs →</a>
             </div>
 
             <div class="brand-card">
-                <div class="brand-number">03 / 05</div>
+                <div class="brand-number" data-lang="b03-num">03 / 05</div>
                 <div class="brand-icon bg-leather accent-leather"><i class="fa-solid fa-bag-shopping"></i></div>
-                <h3 class="accent-leather">Artisan Leather</h3>
-                <span class="brand-tag">Luxury Goods · artisanleather.com</span>
-                <p>Uncompromising quality in every handcrafted detail. 100% top-grain Ethiopian leather — rich textures, impeccable stitching, and timeless elegance by local artisans.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Artisan Leather')">View Goods →</a>
+                <h3 class="accent-leather" data-lang="b03-name">Artisan Leather</h3>
+                <span class="brand-tag" data-lang="b03-tag">Luxury Goods · artisanleather.com</span>
+                <p data-lang="b03-desc">Uncompromising quality in every handcrafted detail. 100% top-grain Ethiopian leather — rich textures, impeccable stitching, and timeless elegance by local artisans.</p>
+                <a href="#catalog" class="brand-link" onclick="filterBrand('Artisan Leather')" data-lang="b03-link">View Goods →</a>
             </div>
 
             <div class="brand-card">
-                <div class="brand-number">04 / 05</div>
+                <div class="brand-number" data-lang="b04-num">04 / 05</div>
                 <div class="brand-icon bg-earthoven accent-earthoven"><i class="fa-solid fa-jar"></i></div>
-                <h3 class="accent-earthoven">Earth & Oven</h3>
-                <span class="brand-tag">Gourmet Foods · Gourmet, Naturally.</span>
-                <p>Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet ready-to-eat grains — crafted with organic ingredients for the health-conscious kitchen.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Earth & Oven')">View Gourmet →</a>
+                <h3 class="accent-earthoven" data-lang="b04-name">Earth & Oven</h3>
+                <span class="brand-tag" data-lang="b04-tag">Gourmet Foods · Gourmet, Naturally.</span>
+                <p data-lang="b04-desc">Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet ready-to-eat grains — crafted with organic ingredients for the health-conscious kitchen.</p>
+                <a href="#catalog" class="brand-link" onclick="filterBrand('Earth & Oven')" data-lang="b04-link">View Gourmet →</a>
             </div>
 
             <div class="brand-card">
-                <div class="brand-number">05 / 05</div>
+                <div class="brand-number" data-lang="b05-num">05 / 05</div>
                 <div class="brand-icon bg-elara accent-elara"><i class="fa-solid fa-spa"></i></div>
-                <h3 class="accent-elara">Elara Hair</h3>
-                <span class="brand-tag">Natural Hair Care · elarahair.com</span>
-                <p>Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments that honour your natural texture without compromise.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Elara Hair')">View Hair Care →</a>
+                <h3 class="accent-elara" data-lang="b05-name">Elara Hair</h3>
+                <span class="brand-tag" data-lang="b05-tag">Natural Hair Care · elarahair.com</span>
+                <p data-lang="b05-desc">Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments that honour your natural texture without compromise.</p>
+                <a href="#catalog" class="brand-link" onclick="filterBrand('Elara Hair')" data-lang="b05-link">View Hair Care →</a>
             </div>
 
         </div>
@@ -949,18 +949,18 @@
 <section id="catalog" class="section catalog-bg">
     <div class="container">
         <div class="section-header">
-            <h2>The Premium Catalog</h2>
+            <h2 data-lang="cat-title">The Premium Catalog</h2>
             <div class="divider"></div>
-            <p>All products across every brand</p>
+            <p data-lang="cat-sub">All products across every brand</p>
         </div>
 
         <div class="catalog-tabs">
-            <button class="tab-btn active" onclick="filterBrand('All',this)">All Products</button>
-            <button class="tab-btn" onclick="filterBrand('Lumina',this)">Lumina</button>
-            <button class="tab-btn" onclick="filterBrand('PureSip',this)">PureSip</button>
-            <button class="tab-btn" onclick="filterBrand('Artisan Leather',this)">Artisan Leather</button>
-            <button class="tab-btn" onclick="filterBrand('Earth & Oven',this)">Earth & Oven</button>
-            <button class="tab-btn" onclick="filterBrand('Elara Hair',this)">Elara Hair</button>
+            <button class="tab-btn active" onclick="filterBrand('All',this)" data-lang="tab-all">All Products</button>
+            <button class="tab-btn" onclick="filterBrand('Lumina',this)" data-lang="tab-lumina">Lumina</button>
+            <button class="tab-btn" onclick="filterBrand('PureSip',this)" data-lang="tab-puresip">PureSip</button>
+            <button class="tab-btn" onclick="filterBrand('Artisan Leather',this)" data-lang="tab-leather">Artisan Leather</button>
+            <button class="tab-btn" onclick="filterBrand('Earth & Oven',this)" data-lang="tab-earthoven">Earth & Oven</button>
+            <button class="tab-btn" onclick="filterBrand('Elara Hair',this)" data-lang="tab-elara">Elara Hair</button>
         </div>
 
         <div class="catalog-grid" id="catalogGrid">
@@ -982,44 +982,6 @@
                         <div class="product-price">5,800 ETB</div>
                     </div>
                     <button class="add-btn" onclick="addToCart('Architectural Floor Lamp',5800)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Lumina">
-                <img class="product-img" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=400&q=80" alt="Sculptural Pendant" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-lumina">Lumina Lighting</span>
-                        <span class="product-id">#003</span>
-                    </div>
-                    <h4>Sculptural Pendant</h4>
-                    <p>Statement ceiling fixtures that blend beauty with functionality. Illuminate dining areas with artful pendants that become the centrepiece of any interior space.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Early Adopter Offer</span>
-                        <div class="product-price">14,500 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Sculptural Pendant',14500)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Lumina">
-                <img class="product-img" src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=400&q=80" alt="Aurora Accent Light" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-lumina">Lumina Lighting</span>
-                        <span class="product-id">#004</span>
-                    </div>
-                    <h4>Aurora Accent Light</h4>
-                    <p>A compact jewel of light. The Aurora casts a warm, diffused halo through its textured glass shell — ideal as a bedside companion or display shelf accent.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Launch Discount</span>
-                        <div class="product-price">2,400 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Aurora Accent Light',2400)"><i class="fa-solid fa-plus"></i> Add</button>
                 </div>
             </div>
 
@@ -1298,7 +1260,7 @@
                         <span class="tier-desc">Early Adopter Offer · 14,500 ETB</span>
                     </div>
                 </div>
-                <p style="font-size:.7rem;letter-spacing:.12em;color:var(--mid);margin-top:1.5rem;">create@luminalighting.com · www.luminalighting.com</p>
+                <p style="font-size:.7rem;letter-spacing:.12em;color:var(--mid);margin-top:1.5rem;">betiqiyas@gmail.com · www.luminalighting.com</p>
                 <div class="story-products" style="margin-top:2rem;">
                     <div class="story-product-item">
                         <div class="story-product-num">01</div>
@@ -1562,28 +1524,28 @@
 <section class="about-section">
     <div class="container">
         <div class="divider"></div>
-        <h2>About Our Premium Hub</h2>
-        <p>This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.</p>
+        <h2 data-lang="ab-title">About Our Premium Hub</h2>
+        <p data-lang="ab-desc">This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.</p>
         <div class="about-pillars">
             <div class="about-pillar">
                 <i class="fa-solid fa-shield-halved"></i>
-                <span>100% Ethically Sourced</span>
+                <span data-lang="ab-p1">100% Ethically Sourced</span>
             </div>
             <div class="about-pillar">
                 <i class="fa-solid fa-leaf"></i>
-                <span>Eco Conscious</span>
+                <span data-lang="ab-p2">Eco Conscious</span>
             </div>
             <div class="about-pillar">
                 <i class="fa-solid fa-hands-holding"></i>
-                <span>Artisan Empowered</span>
+                <span data-lang="ab-p3">Artisan Empowered</span>
             </div>
             <div class="about-pillar">
                 <i class="fa-solid fa-truck-ramp-box"></i>
-                <span>Nationwide Distribution</span>
+                <span data-lang="ab-p4">Nationwide Distribution</span>
             </div>
             <div class="about-pillar">
                 <i class="fa-solid fa-award"></i>
-                <span>Premium Certified</span>
+                <span data-lang="ab-p5">Premium Certified</span>
             </div>
         </div>
     </div>
@@ -1593,15 +1555,15 @@
 <section id="contact" class="section" style="background:var(--warm);">
     <div class="container">
         <div class="section-header">
-            <h2>Let's Connect</h2>
+            <h2 data-lang="contact-title">Let's Connect</h2>
             <div class="divider"></div>
-            <p>Reach our master inquiry office</p>
+            <p data-lang="contact-sub">Reach our master inquiry office</p>
         </div>
         <div class="contact-grid">
             <div>
                 <h3 style="font-size:1.4rem;font-weight:400;font-style:italic;margin-bottom:1.5rem;">Lumina Lighting</h3>
-                <div class="contact-info-row"><i class="fa-solid fa-phone"></i> +251 911 000 000</div>
-                <div class="contact-info-row"><i class="fa-solid fa-envelope"></i> create@luminalighting.com</div>
+                <div class="contact-info-row"><i class="fa-solid fa-phone"></i> +251716501961</div>
+                <div class="contact-info-row"><i class="fa-solid fa-envelope"></i> betiqiyas@gmail.com</div>
                 <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.luminalighting.com</div>
                 <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.reallygreatsip.com</div>
                 <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.artisanleather.com</div>
@@ -1612,18 +1574,18 @@
             </div>
             <div class="contact-form">
                 <div class="form-field">
-                    <label>Full Name</label>
+                    <label data-lang="contact-name">Full Name</label>
                     <input type="text" placeholder="Your name">
                 </div>
                 <div class="form-field">
-                    <label>Email Address</label>
+                    <label data-lang="contact-email">Email Address</label>
                     <input type="email" placeholder="your@email.com">
                 </div>
                 <div class="form-field">
-                    <label>Message</label>
+                    <label data-lang="contact-msg">Message</label>
                     <textarea placeholder="Tell us about your inquiry…"></textarea>
                 </div>
-                <button class="btn-pill filled" onclick="alert('Inquiry sent successfully!')">Send Message</button>
+                <button class="btn-pill filled" onclick="alert('Inquiry sent successfully!')" data-lang="contact-send">Send Message</button>
             </div>
         </div>
     </div>
@@ -1631,26 +1593,26 @@
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
-    <p class="footer-brands">Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</p>
-    <p>© 2026 Premium Brands Collection · Ethiopia · Four Exceptional Brands, One Destination</p>
+    <p class="footer-brands" data-lang="footer-brands">Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</p>
+    <p data-lang="footer-copy">© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination</p>
 </footer>
 
 <!-- ═══════════════ CART DRAWER ═══════════════ -->
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
-        <h3>Your Order</h3>
+        <h3 data-lang="cart-title">Your Order</h3>
         <button class="btn-icon" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="cart-body" id="cartBody">
-        <div class="cart-empty" id="cartEmpty">Your basket is empty.</div>
+        <div class="cart-empty" id="cartEmpty" data-lang="cart-empty">Your basket is empty.</div>
     </div>
     <div class="cart-footer">
         <div class="cart-total-row">
-            <span class="cart-total-label">Total</span>
+            <span class="cart-total-label" data-lang="cart-total">Total</span>
             <span class="cart-total-amount" id="cartTotal">0 ETB</span>
         </div>
-        <button class="btn-pill filled" style="width:100%;padding:14px;" onclick="alert('Order confirmed for dispatch!')">Confirm Order</button>
+        <button class="btn-pill filled" style="width:100%;padding:14px;" onclick="alert('Order confirmed for dispatch!')" data-lang="cart-checkout">Confirm Order</button>
     </div>
 </div>
 
@@ -1720,6 +1682,8 @@
     }
 
     /* ── THEME ── */
+    applyLanguage(currentLang);
+
     document.getElementById('themeBtn').addEventListener('click', () => {
         document.body.classList.toggle('dark');
         document.getElementById('themeIcon').className =
@@ -1727,17 +1691,104 @@
     });
 
     /* ── LANGUAGE ── */
-    const langMap = {
-        EN: { sub: 'Five Exceptional Brands, One Destination', login: 'Login', btn: 'AM' },
-        AM: { sub: 'አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ', login: 'ግባ', btn: 'EN' }
+    const translations = {
+        en: {
+            "logo-sub": "Five Exceptional Brands, One Destination",
+            "nav-home": "Home", "nav-brands": "Brands", "nav-catalog": "Catalog", "nav-collection": "Collection",
+            "nav-about": "About", "nav-contact": "Contact", "nav-blog": "Blog",
+            "auth-login": "Login", "lang-btn": "AM",
+            "cart-title": "Your Order", "cart-empty": "Your basket is empty.", "cart-total": "Total", "cart-checkout": "Confirm Order",
+            "hero-eyebrow": "Curated · Authentic · Ethiopian",
+            "hero-title": "Four Exceptional Brands,<br><em>One Destination</em>",
+            "hero-desc": "Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.",
+            "hero-cta-1": "Explore Catalog", "hero-cta-2": "Meet the Brands",
+            "chip-lumina": "Lumina", "chip-puresip": "PureSip", "chip-leather": "Artisan Leather", "chip-earthoven": "Earth & Oven", "chip-elara": "Elara Hair",
+            "brands-title": "Our Brand Portfolio", "brands-sub": "Five brands · One shared philosophy of quality",
+            "b01-num": "01 / 05", "b01-name": "Lumina", "b01-tag": "Lighting · Presented by Betelihem Getaneh",
+            "b01-desc": "Shaping moods through mindful design and sustainability — where light becomes an immersive experience. Architectural fixtures crafted for the modern interior.",
+            "b01-link": "View Collection →",
+            "b02-num": "02 / 05", "b02-name": "PureSip", "b02-tag": "Cold-Pressed Juices · reallygreatsip.com",
+            "b02-desc": "A refreshing natural journey. 100% organic fruits, zero additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants.",
+            "b02-link": "View Elixirs →",
+            "b03-num": "03 / 05", "b03-name": "Artisan Leather", "b03-tag": "Luxury Goods · artisanleather.com",
+            "b03-desc": "Uncompromising quality in every handcrafted detail. 100% top-grain Ethiopian leather — rich textures, impeccable stitching, and timeless elegance by local artisans.",
+            "b03-link": "View Goods →",
+            "b04-num": "04 / 05", "b04-name": "Earth & Oven", "b04-tag": "Gourmet Foods · Gourmet, Naturally.",
+            "b04-desc": "Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet ready-to-eat grains — crafted with organic ingredients for the health-conscious kitchen.",
+            "b04-link": "View Gourmet →",
+            "b05-num": "05 / 05", "b05-name": "Elara Hair", "b05-tag": "Natural Hair Care · elarahair.com",
+            "b05-desc": "Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments that honour your natural texture without compromise.",
+            "b05-link": "View Hair Care →",
+            "cat-title": "The Premium Catalog", "cat-sub": "All products across every brand",
+            "tab-all": "All Products", "tab-lumina": "Lumina", "tab-puresip": "PureSip", "tab-leather": "Artisan Leather", "tab-earthoven": "Earth & Oven", "tab-elara": "Elara Hair",
+            "ab-title": "About Our Premium Hub",
+            "ab-desc": "This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.",
+            "ab-p1": "100% Ethically Sourced", "ab-p2": "Eco Conscious", "ab-p3": "Artisan Empowered", "ab-p4": "Nationwide Distribution", "ab-p5": "Premium Certified",
+            "contact-title": "Let's Connect", "contact-sub": "Reach our master inquiry office",
+            "contact-name": "Full Name", "contact-email": "Email Address", "contact-msg": "Message",
+            "contact-send": "Send Message",
+            "footer-brands": "Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair",
+            "footer-copy": "© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination"
+        },
+        am: {
+            "logo-sub": "አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ",
+            "nav-home": "መነሻ", "nav-brands": "ብራንዶች", "nav-catalog": "ካታሎግ", "nav-collection": "ስብስብ",
+            "nav-about": "ስለ እኛ", "nav-contact": "ግንኙነት", "nav-blog": "ብሎግ",
+            "auth-login": "ግባ", "lang-btn": "EN",
+            "cart-title": "ትዕዛዝህ", "cart-empty": "ቅርጫትህ ባዶ ነው።", "cart-total": "ጠቅላላ", "cart-checkout": "ትእዛዝ አረጋግጥ",
+            "hero-eyebrow": "የተመረጠ · እውነተኛ · ኢትዮጵያዊ",
+            "hero-title": "አራት ልዩ ብራንዶች፣<br><em>አንድ መድረሻ</em>",
+            "hero-desc": "በፕሪሚየም መብራት፣ በቀዝቃዛ የጤና መጠጦች፣ በከፍተኛ የኢትዮጵያ ቆዳ ስራዎች፣ በጥራት ምግቦች እና በተፈጥሮ ፀጉር እንክብካቤ ውስጥ እጅግ የላቀ የእጅ ስራን ይለማመዱ።",
+            "hero-cta-1": "ካታሎግ ያስሱ", "hero-cta-2": "ብራንዶቹን ይገናኙ",
+            "chip-lumina": "ሉሚና", "chip-puresip": "ፒውርሲፕ", "chip-leather": "አርቲዛን ሌዘር", "chip-earthoven": "ኤርት ኤንድ ኦቨን", "chip-elara": "ኤላራ ፀጉር",
+            "brands-title": "የብራንድ ፖርትፎሊዮአችን", "brands-sub": "አምስት ብራንዶች · አንድ የጥራት ፍልስፍና",
+            "b01-num": "01 / 05", "b01-name": "ሉሚና", "b01-tag": "መብራት · በቤተልሄም ጌታነህ የቀረበ",
+            "b01-desc": "በጥንቃቄ ዲዛይን እና ዘላቂነት ስሜትን መቅረጽ — ብርሃን ልምድ በሚሆንበት። ለዘመናዊ ውስጣዊ ክፍሎች የተሰሩ የስነ-ህንፃ መገልገያዎች።",
+            "b01-link": "ስብስብ ይመልከቱ →",
+            "b02-num": "02 / 05", "b02-name": "ፒውርሲፕ", "b02-tag": "የቀዝቃዛ ጭማቂ · reallygreatsip.com",
+            "b02-desc": "የሚያድስ የተፈጥሮ ጉዞ። 100% ኦርጋኒክ ፍራፍሬዎች፣ ምንም ተጨማሪ ነገር የለም።",
+            "b02-link": "ጭማቂዎችን ይመልከቱ →",
+            "b03-num": "03 / 05", "b03-name": "አርቲዛን ሌዘር", "b03-tag": "የቅንጦት እቃዎች · artisanleather.com",
+            "b03-desc": "በእያንዳንዱ የእጅ ስራ ዝርዝር ውስጥ የማይደራደር ጥራት። 100% ከፍተኛ የኢትዮጵያ ቆዳ።",
+            "b03-link": "እቃዎችን ይመልከቱ →",
+            "b04-num": "04 / 05", "b04-name": "ኤርት ኤንድ ኦቨን", "b04-tag": "ጎርሜ ምግቦች · ጎርሜ፣ በተፈጥሮ",
+            "b04-desc": "ፕሪሚየም የተቀነባበሩ ምግቦችን እንደገና መግለጽ። የእጅ ስራ ሾርባዎች፣ የፍራፍሬ መጠበቂያዎች።",
+            "b04-link": "ጎርሜ ይመልከቱ →",
+            "b05-num": "05 / 05", "b05-name": "ኤላራ ፀጉር", "b05-tag": "ተፈጥሯዊ የፀጉር እንክብካቤ · elarahair.com",
+            "b05-desc": "የኢትዮጵያ እፅዋት ወደ የቅንጦት የፀጉር ሥነ-ስርዓት የተለወጡ። የቀዝቃዛ ዘይቶች፣ የእፅዋት ሻምፑዎች።",
+            "b05-link": "የፀጉር እንክብካቤ ይመልከቱ →",
+            "cat-title": "ፕሪሚየም ካታሎግ", "cat-sub": "በሁሉም ብራንድ ውስጥ ያሉ ምርቶች",
+            "tab-all": "ሁሉም ምርቶች", "tab-lumina": "ሉሚና", "tab-puresip": "ፒውርሲፕ", "tab-leather": "አርቲዛን ሌዘር", "tab-earthoven": "ኤርት ኤንድ ኦቨን", "tab-elara": "ኤላራ ፀጉር",
+            "ab-title": "ስለ ፕሪሚየም ሀብታችን",
+            "ab-desc": "ይህ የትብብር መዋቅር ከፍተኛ ጥራት ያላቸውን ምርቶች በቀጥታ ወደ ከተማ ቦታዎች ለማድረስ የአቅርቦት አውታሮችን ያገናኛል።",
+            "ab-p1": "100% በሥነ-ምግባር የተገኘ", "ab-p2": "ለአካባቢ ተስማሚ", "ab-p3": "የእጅ ባለሙያ ተጠናክሯል",
+            "ab-p4": "ሀገር አቀፍ ስርጭት", "ab-p5": "ፕሪሚየም የተረጋገጠ",
+            "contact-title": "ያነጋግሩን", "contact-sub": "ዋና መጠይቅ ቢሮአችንን ያግኙ",
+            "contact-name": "ሙሉ ስም", "contact-email": "ኢሜይል አድራሻ", "contact-msg": "መልእክት",
+            "contact-send": "መልእክት ላክ",
+            "footer-brands": "ሉሚና · ፒውርሲፕ · አርቲዛን ሌዘር · ኤርት ኤንድ ኦቨን · ኤላራ ፀጉር",
+            "footer-copy": "© 2026 ፕሪሚየም ብራንዶች ስብስብ · ኢትዮጵያ · አምስት ልዩ ብራንዶች፣ አንድ መድረሻ"
+        }
     };
-    let lang = 'EN';
-    document.getElementById('langBtn').addEventListener('click', () => {
-        lang = lang === 'EN' ? 'AM' : 'EN';
-        document.getElementById('storeSub').textContent    = langMap[lang].sub;
-        document.getElementById('authBtnLabel').textContent = langMap[lang].login;
-        document.getElementById('langBtn').textContent     = langMap[lang].btn;
-    });
+    let currentLang = localStorage.getItem('premium_lang') || 'en';
+
+    function applyLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('premium_lang', lang);
+        document.getElementById('langBtn').textContent = lang === 'en' ? 'AM' : 'EN';
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+    }
+
+    function switchLanguage() {
+        applyLanguage(currentLang === 'en' ? 'am' : 'en');
+    }
+
+    document.getElementById('langBtn').addEventListener('click', switchLanguage);
 
     /* ── MOBILE NAV ── */
     const hamburger = document.getElementById('hamburger');
