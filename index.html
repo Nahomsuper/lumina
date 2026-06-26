@@ -1682,8 +1682,6 @@
     }
 
     /* ── THEME ── */
-    applyLanguage(currentLang);
-
     document.getElementById('themeBtn').addEventListener('click', () => {
         document.body.classList.toggle('dark');
         document.getElementById('themeIcon').className =
@@ -1789,6 +1787,8 @@
     }
 
     document.getElementById('langBtn').addEventListener('click', switchLanguage);
+
+    applyLanguage(currentLang);
 
     /* ── MOBILE NAV ── */
     const hamburger = document.getElementById('hamburger');
