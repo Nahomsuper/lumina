@@ -832,6 +832,35 @@
     document.getElementById('langBtn').addEventListener('click', switchLanguage);
     applyLanguage(currentLang);
 
+    /* ── AUTH ── */
+    const authBtn = document.getElementById('authBtn');
+    const authLabel = document.getElementById('authBtnLabel');
+    function updateAuthUI() {
+        const user = localStorage.getItem('premium_user');
+        if (user) {
+            authLabel.innerHTML = 'Hi, ' + user;
+        } else {
+            const lang = localStorage.getItem('premium_lang') || 'en';
+            authLabel.innerHTML = lang === 'en' ? 'Login' : 'ግባ';
+        }
+    }
+    authBtn.addEventListener('click', () => {
+        const user = localStorage.getItem('premium_user');
+        if (user) {
+            if (confirm('Logout ' + user + '?')) {
+                localStorage.removeItem('premium_user');
+                updateAuthUI();
+            }
+        } else {
+            const name = prompt('Enter your name:');
+            if (name && name.trim()) {
+                localStorage.setItem('premium_user', name.trim());
+                updateAuthUI();
+            }
+        }
+    });
+    updateAuthUI();
+
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
     if (window.innerWidth <= 900) { hamburger.style.display = 'flex'; mobileNav.style.display = 'block'; }
