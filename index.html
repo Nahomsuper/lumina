@@ -1,1839 +1,1464 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Brands — Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Brands — Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --obsidian:  #0D0C0A;
+  --carbon:    #161410;
+  --ink:       #1E1B17;
+  --mink:      #2A2520;
+  --parchment: #F2EDE5;
+  --silk:      #FAF7F2;
+  --fog:       #C8BFB0;
+  --ash:       #8A8070;
+  --ember:     #C49A45;
+  --flame:     #A06830;
+  --gold:      #D4AF62;
+  --rose:      #B07060;
 
-    <style>
-        :root {
-            --cream:    #F5F2ED;
-            --ivory:    #FDFAF5;
-            --warm:     #EDE8DF;
-            --sand:     #C9B99A;
-            --charcoal: #2C2B28;
-            --mid:      #7A7163;
-            --amber:    #B07D3A;
-            --copper:   #A0522D;
-            --sage:     #5C7A5A;
-            --rust:     #8B3A2A;
-            --dusk:     #4A4058;
-            --gold:     #C9A84C;
+  --lumina:    #C49A45;
+  --puresip:   #5E8C5A;
+  --leather:   #9A5C30;
+  --earthoven: #8B6030;
+  --elara:     #907EC0;
 
-            /* brand accents */
-            --lumina:   #B07D3A;
-            --puresip:  #5C7A5A;
-            --leather:  #8B4513;
-            --earthoven:#7A3B1E;
-            --elara:    #7B5EA7;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Raleway', sans-serif;
+}
 
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body:    'Jost', sans-serif;
-            --header-bg: rgba(245,242,237,0.94);
-        }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  background: var(--obsidian);
+  color: var(--parchment);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-        html { scroll-behavior: smooth; }
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--carbon); }
+::-webkit-scrollbar-thumb { background: var(--ember); border-radius: 2px; }
 
-        body {
-            font-family: var(--font-body);
-            background: var(--cream);
-            color: var(--charcoal);
-            line-height: 1.7;
-        }
+/* ── UTILITY ── */
+.serif { font-family: var(--font-display); }
+.container { max-width: 1340px; margin: 0 auto; padding: 0 2.5rem; }
 
-        /* ── TYPOGRAPHY ── */
-        .serif { font-family: var(--font-display); }
-        h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
+.gold-rule {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.gold-rule::before, .gold-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ember), transparent);
+}
+.gold-rule span {
+  font-size: 0.58rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
 
-        /* ── THIN DIVIDER ── */
-        .divider {
-            width: 60px;
-            height: 1px;
-            background: var(--sand);
-            margin: 0 auto 2rem;
-        }
+.eyebrow {
+  font-size: 0.58rem;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 1rem;
+  display: block;
+}
 
-        /* ── HEADER ── */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--header-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(201,185,154,0.4);
-        }
-        .header-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo-mark {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .logo-icon {
-            width: 40px; height: 40px;
-            border: 1px solid var(--sand);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--amber);
-            font-size: 14px;
-        }
-        .logo-text {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            color: var(--charcoal);
-            text-transform: uppercase;
-        }
-        .logo-sub {
-            font-family: var(--font-body);
-            font-size: 0.6rem;
-            letter-spacing: 0.18em;
-            color: var(--mid);
-            text-transform: uppercase;
-            display: block;
-            margin-top: -2px;
-        }
-        nav { display: flex; gap: 2rem; align-items: center; }
-        nav a {
-            font-size: 0.72rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--mid);
-            text-decoration: none;
-            transition: color .2s;
-        }
-        nav a:hover { color: var(--charcoal); }
+/* ── HEADER ── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(13,12,10,0.88);
+  backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid rgba(196,154,69,0.15);
+  transition: background 0.3s;
+}
+.header-inner {
+  max-width: 1340px; margin: 0 auto;
+  padding: 0 2.5rem;
+  height: 74px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo-wrap { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.logo-gem {
+  width: 42px; height: 42px;
+  border: 1px solid rgba(196,154,69,0.4);
+  transform: rotate(45deg);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-gem i { transform: rotate(-45deg); color: var(--ember); font-size: 14px; }
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--parchment);
+}
+.logo-tagline {
+  display: block;
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-top: 2px;
+}
+nav { display: flex; gap: 2.2rem; }
+nav a {
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fog);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  position: absolute; bottom: -3px; left: 0; right: 0;
+  height: 1px; background: var(--ember);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.25s;
+}
+nav a:hover { color: var(--parchment); }
+nav a:hover::after { transform: scaleX(1); }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.btn-ico {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(196,154,69,0.25);
+  background: transparent; border-radius: 50%;
+  cursor: pointer; color: var(--fog); font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; position: relative;
+}
+.btn-ico:hover { border-color: var(--ember); color: var(--ember); }
+.cart-badge {
+  position: absolute; top: -4px; right: -4px;
+  background: var(--ember); color: var(--obsidian);
+  font-size: 9px; font-weight: 700;
+  width: 17px; height: 17px; border-radius: 50%;
+  display: none; align-items: center; justify-content: center;
+}
+.btn-outline {
+  padding: 9px 24px; font-size: 0.62rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  border: 1px solid rgba(196,154,69,0.5);
+  background: transparent; color: var(--parchment);
+  cursor: pointer; font-family: var(--font-body);
+  transition: all 0.2s;
+}
+.btn-outline:hover { background: var(--ember); border-color: var(--ember); color: var(--obsidian); }
+.btn-solid {
+  padding: 9px 24px; font-size: 0.62rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  border: 1px solid var(--ember);
+  background: var(--ember); color: var(--obsidian);
+  cursor: pointer; font-family: var(--font-body);
+  font-weight: 600; transition: all 0.2s;
+}
+.btn-solid:hover { background: var(--gold); border-color: var(--gold); }
+#hamburger { display: none; }
 
-        .header-actions { display: flex; align-items: center; gap: 10px; }
-        .btn-icon {
-            width: 38px; height: 38px;
-            border: 1px solid rgba(201,185,154,0.5);
-            background: transparent;
-            border-radius: 50%;
-            cursor: pointer;
-            color: var(--mid);
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all .2s;
-            position: relative;
-        }
-        .btn-icon:hover { border-color: var(--amber); color: var(--amber); }
-        .cart-badge {
-            position: absolute;
-            top: -4px; right: -4px;
-            background: var(--amber);
-            color: #fff;
-            font-size: 9px;
-            font-weight: 600;
-            width: 16px; height: 16px;
-            border-radius: 50%;
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-        .btn-pill {
-            padding: 8px 20px;
-            font-size: 0.68rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            border: 1px solid var(--charcoal);
-            background: transparent;
-            color: var(--charcoal);
-            cursor: pointer;
-            transition: all .2s;
-            font-family: var(--font-body);
-        }
-        .btn-pill:hover {
-            background: var(--charcoal);
-            color: var(--cream);
-        }
-        .btn-pill.filled {
-            background: var(--charcoal);
-            color: var(--cream);
-        }
-        .btn-pill.filled:hover {
-            background: var(--amber);
-            border-color: var(--amber);
-        }
+/* ── MOBILE NAV ── */
+.mobile-nav {
+  display: none;
+  background: var(--carbon);
+  border-bottom: 1px solid rgba(196,154,69,0.15);
+  padding: 1.2rem 2.5rem;
+}
+.mobile-nav a {
+  display: block; padding: 12px 0;
+  font-size: 0.68rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--fog);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,154,69,0.1);
+}
 
-        /* ── MOBILE NAV ── */
-        .mobile-nav {
-            display: none;
-            background: var(--ivory);
-            border-bottom: 1px solid rgba(201,185,154,0.4);
-            padding: 1rem 2rem;
-        }
-        .mobile-nav a {
-            display: block;
-            padding: 10px 0;
-            font-size: 0.75rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--mid);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(201,185,154,0.2);
-        }
-        .mobile-nav a:last-child { border-bottom: none; }
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  position: relative; overflow: hidden;
+  background: var(--obsidian);
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196,154,69,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(90,70,180,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(94,140,90,0.05) 0%, transparent 55%);
+}
+.hero-ornament {
+  position: absolute;
+  width: 700px; height: 700px;
+  border: 1px solid rgba(196,154,69,0.06);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+.hero-ornament::before {
+  content: '';
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgba(196,154,69,0.04);
+  border-radius: 50%;
+}
+.hero-content { position: relative; z-index: 1; }
+.hero-emblem {
+  width: 70px; height: 70px;
+  border: 1px solid rgba(196,154,69,0.35);
+  transform: rotate(45deg);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 2.5rem;
+}
+.hero-emblem i { transform: rotate(-45deg); color: var(--ember); font-size: 22px; }
+.hero-sup {
+  font-size: 0.6rem; letter-spacing: 0.38em;
+  text-transform: uppercase; color: var(--ember);
+  margin-bottom: 2rem; display: block;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7.5vw, 7rem);
+  font-weight: 400; font-style: italic;
+  line-height: 1.05; color: var(--parchment);
+  margin-bottom: 0.4rem;
+}
+.hero h1 em { font-style: normal; font-weight: 700; color: var(--gold); }
+.hero-sub {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 400; color: var(--ash);
+  margin-bottom: 2.5rem; letter-spacing: 0.04em;
+}
+.hero-desc {
+  max-width: 560px; margin: 0 auto 3rem;
+  font-size: 0.82rem; color: var(--fog); letter-spacing: 0.04em;
+  line-height: 1.9;
+}
+.brand-chips {
+  display: flex; justify-content: center;
+  gap: 1.2rem; flex-wrap: wrap; margin-bottom: 3.5rem;
+}
+.chip {
+  font-size: 0.55rem; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--ash);
+  padding: 6px 18px;
+  border: 1px solid rgba(196,154,69,0.2);
+  transition: all 0.2s;
+}
+.chip:hover { border-color: var(--ember); color: var(--ember); cursor: pointer; }
+.hero-ctas { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+.hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: var(--ash); font-size: 0.55rem; letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--ember), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
 
-        /* ── HERO ── */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 6rem 2rem 4rem;
-            background: linear-gradient(165deg, var(--ivory) 0%, var(--warm) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(ellipse, rgba(176,125,58,0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero-eyebrow {
-            font-size: 0.65rem;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--amber);
-            margin-bottom: 1.5rem;
-        }
-        .hero h1 {
-            font-size: clamp(3rem, 7vw, 6rem);
-            font-weight: 300;
-            line-height: 1.1;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        .hero h1 em { font-style: normal; font-weight: 600; }
-        .hero-desc {
-            max-width: 580px;
-            margin: 0 auto 2.5rem;
-            font-size: 0.9rem;
-            color: var(--mid);
-            letter-spacing: 0.02em;
-        }
-        .hero-brand-strip {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-        .hero-brand-chip {
-            font-size: 0.6rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--mid);
-            padding: 6px 16px;
-            border: 1px solid rgba(201,185,154,0.5);
-        }
-        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+/* ── SECTION ── */
+.section { padding: 7rem 0; }
+.section-header { text-align: center; margin-bottom: 5rem; }
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 400; font-style: italic;
+  color: var(--parchment); margin-bottom: 1.2rem;
+}
+.section-header p {
+  font-size: 0.7rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ash);
+}
 
-        /* ── SECTION WRAPPER ── */
-        .section { padding: 6rem 2rem; }
-        .container { max-width: 1280px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 300;
-            font-style: italic;
-            color: var(--charcoal);
-            margin-bottom: 1rem;
-        }
-        .section-header p {
-            font-size: 0.8rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--mid);
-        }
+/* ── BRAND SHOWCASE ── */
+.brands-section { background: var(--carbon); }
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  border: 1px solid rgba(196,154,69,0.12);
+}
+.brand-card {
+  padding: 3rem 2rem;
+  border-right: 1px solid rgba(196,154,69,0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative; overflow: hidden;
+}
+.brand-card:last-child { border-right: none; }
+.brand-card::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px; transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s;
+}
+.brand-card:hover { background: var(--ink); }
+.brand-card:hover::before { transform: scaleX(1); }
+.brand-card.c-lumina::before    { background: var(--lumina); }
+.brand-card.c-puresip::before   { background: var(--puresip); }
+.brand-card.c-leather::before   { background: var(--leather); }
+.brand-card.c-earthoven::before { background: var(--earthoven); }
+.brand-card.c-elara::before     { background: var(--elara); }
+.brand-num {
+  font-family: var(--font-display);
+  font-size: 3rem; font-weight: 400;
+  color: rgba(196,154,69,0.08);
+  line-height: 1; margin-bottom: 1.5rem;
+}
+.brand-icon-ring {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem; font-size: 18px;
+  border: 1px solid currentColor;
+}
+.brand-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 400; font-style: italic;
+  margin-bottom: 0.6rem;
+}
+.brand-niche {
+  font-size: 0.58rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ash);
+  margin-bottom: 1.2rem; display: block;
+}
+.brand-card p { font-size: 0.78rem; color: var(--fog); line-height: 1.8; }
+.brand-action {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.58rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: inherit;
+  text-decoration: none; margin-top: 1.5rem;
+  border-bottom: 1px solid currentColor; padding-bottom: 2px;
+  transition: gap 0.2s;
+}
+.brand-action:hover { gap: 12px; }
 
-        /* ── BRAND CARDS ── */
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1px;
-            background: rgba(201,185,154,0.3);
-            border: 1px solid rgba(201,185,154,0.3);
-        }
-        .brand-card {
-            background: var(--ivory);
-            padding: 2.5rem 2rem;
-            cursor: pointer;
-            transition: background .25s;
-            border: none;
-        }
-        .brand-card:hover { background: var(--warm); }
-        .brand-number {
-            font-family: var(--font-display);
-            font-size: 0.65rem;
-            letter-spacing: 0.24em;
-            color: var(--sand);
-            margin-bottom: 1rem;
-        }
-        .brand-icon {
-            width: 44px; height: 44px;
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1.2rem;
-            font-size: 16px;
-        }
-        .brand-card h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        .brand-tag {
-            font-size: 0.6rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--sand);
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .brand-card p {
-            font-size: 0.82rem;
-            color: var(--mid);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        .brand-link {
-            font-size: 0.65rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--charcoal);
-            text-decoration: none;
-            border-bottom: 1px solid var(--sand);
-            padding-bottom: 2px;
-            transition: border-color .2s, color .2s;
-        }
-        .brand-link:hover { color: var(--amber); border-color: var(--amber); }
+/* ── CATALOG ── */
+.catalog-section { background: var(--obsidian); }
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 4rem; justify-content: center;
+}
+.filter-btn {
+  padding: 10px 26px; font-size: 0.6rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  border: 1px solid rgba(196,154,69,0.2);
+  background: transparent; color: var(--fog);
+  cursor: pointer; font-family: var(--font-body);
+  transition: all 0.22s;
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--ember); background: rgba(196,154,69,0.08); color: var(--ember);
+}
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px,1fr));
+  gap: 1px; background: rgba(196,154,69,0.1);
+}
+.product-card {
+  background: var(--carbon);
+  display: flex; flex-direction: column;
+  transition: background 0.25s;
+}
+.product-card:hover { background: var(--ink); }
+.product-img-wrap { position: relative; overflow: hidden; }
+.product-img {
+  width: 100%; height: 280px;
+  object-fit: cover; display: block;
+  transition: transform 0.6s cubic-bezier(0.25,0,0,1);
+  filter: brightness(0.88) saturate(0.85);
+}
+.product-card:hover .product-img {
+  transform: scale(1.04);
+  filter: brightness(0.95) saturate(1);
+}
+.product-brand-tag {
+  position: absolute; top: 16px; left: 16px;
+  font-size: 0.52rem; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  padding: 5px 12px;
+  background: rgba(13,12,10,0.82);
+  backdrop-filter: blur(6px);
+}
+.product-body { padding: 2rem 2rem 1.2rem; flex: 1; }
+.product-id {
+  font-family: var(--font-display);
+  font-size: 0.65rem; color: rgba(196,154,69,0.4);
+  letter-spacing: 0.15em; display: block; margin-bottom: 0.8rem;
+}
+.product-body h4 {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 400; font-style: italic;
+  color: var(--parchment); margin-bottom: 0.8rem;
+}
+.product-body p { font-size: 0.8rem; color: var(--fog); line-height: 1.8; }
+.product-foot {
+  padding: 1.4rem 2rem;
+  border-top: 1px solid rgba(196,154,69,0.12);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.price-block { display: flex; flex-direction: column; gap: 3px; }
+.price-label {
+  font-size: 0.55rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ash);
+}
+.price {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 500; color: var(--parchment);
+}
+.add-btn {
+  padding: 10px 24px; font-size: 0.6rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  border: 1px solid rgba(196,154,69,0.3);
+  background: transparent; color: var(--fog);
+  cursor: pointer; font-family: var(--font-body);
+  transition: all 0.22s; display: flex; align-items: center; gap: 8px;
+}
+.add-btn:hover { border-color: var(--ember); color: var(--ember); background: rgba(196,154,69,0.06); }
 
-        /* ── CATALOG ── */
-        .catalog-bg { background: var(--ivory); }
-        .catalog-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 3rem;
-        }
-        .tab-btn {
-            padding: 8px 20px;
-            font-size: 0.65rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            border: 1px solid rgba(201,185,154,0.5);
-            background: transparent;
-            color: var(--mid);
-            cursor: pointer;
-            transition: all .2s;
-            font-family: var(--font-body);
-        }
-        .tab-btn:hover, .tab-btn.active {
-            background: var(--charcoal);
-            color: var(--cream);
-            border-color: var(--charcoal);
-        }
+/* ── BRAND STORIES ── */
+.stories-section { background: var(--carbon); }
+.story-block {
+  border-top: 1px solid rgba(196,154,69,0.1);
+  padding: 0;
+}
+.story-block:first-child { border-top: none; }
+.story-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+.story-inner.flip { direction: rtl; }
+.story-inner.flip > * { direction: ltr; }
+.story-content {
+  padding: 6rem 5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.story-num {
+  font-family: var(--font-display);
+  font-size: 6rem; font-weight: 400;
+  color: rgba(196,154,69,0.06);
+  line-height: 1;
+  margin-bottom: -1.5rem;
+  display: block;
+}
+.story-brand {
+  font-size: 0.58rem; letter-spacing: 0.3em;
+  text-transform: uppercase; margin-bottom: 1rem;
+  display: block;
+}
+.story-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400; font-style: italic;
+  color: var(--parchment); line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.story-body {
+  font-size: 0.83rem; color: var(--fog);
+  line-height: 1.95; margin-bottom: 2.5rem;
+}
+.story-specs {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+.spec-row {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid currentColor;
+  background: rgba(255,255,255,0.02);
+}
+.spec-name {
+  font-size: 0.6rem; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 600;
+  min-width: 110px; color: inherit;
+}
+.spec-detail {
+  font-size: 0.78rem; color: var(--fog); flex: 1;
+}
+.story-image {
+  position: relative; overflow: hidden;
+}
+.story-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  filter: brightness(0.75) saturate(0.8);
+  transition: transform 0.8s cubic-bezier(0.25,0,0,1), filter 0.5s;
+}
+.story-block:hover .story-image img {
+  transform: scale(1.03);
+  filter: brightness(0.85) saturate(0.9);
+}
+.story-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: flex-end;
+  padding: 2.5rem;
+  background: linear-gradient(to top, rgba(13,12,10,0.7) 0%, transparent 55%);
+}
+.story-price-badge {
+  background: rgba(13,12,10,0.8);
+  border: 1px solid rgba(196,154,69,0.3);
+  backdrop-filter: blur(8px);
+  padding: 1rem 1.4rem;
+}
+.badge-label {
+  font-size: 0.52rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ash); display: block;
+}
+.badge-amount {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 500; color: var(--parchment);
+}
 
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 1px;
-            background: rgba(201,185,154,0.3);
-        }
-        .product-card {
-            background: var(--ivory);
-            display: flex;
-            flex-direction: column;
-            transition: background .2s;
-        }
-        .product-card:hover { background: var(--cream); }
-        .product-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-            border-bottom: 1px solid rgba(201,185,154,0.3);
-        }
-        .product-card-body { padding: 2rem; flex: 1; }
-        .product-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.2rem;
-        }
-        .product-brand-label {
-            font-size: 0.58rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-        .product-id {
-            font-family: var(--font-display);
-            font-size: 0.7rem;
-            color: var(--sand);
-            letter-spacing: 0.1em;
-        }
-        .product-card h4 {
-            font-size: 1.35rem;
-            font-weight: 400;
-            font-style: italic;
-            margin-bottom: 0.75rem;
-            color: var(--charcoal);
-        }
-        .product-card p {
-            font-size: 0.8rem;
-            color: var(--mid);
-            line-height: 1.75;
-        }
-        .product-card-footer {
-            padding: 1.2rem 2rem;
-            border-top: 1px solid rgba(201,185,154,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .product-price {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--charcoal);
-        }
-        .product-price-label {
-            font-size: 0.58rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--sand);
-        }
-        .add-btn {
-            padding: 9px 22px;
-            font-size: 0.62rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            border: 1px solid var(--charcoal);
-            background: transparent;
-            color: var(--charcoal);
-            cursor: pointer;
-            transition: all .2s;
-            font-family: var(--font-body);
-        }
-        .add-btn:hover {
-            background: var(--charcoal);
-            color: var(--cream);
-        }
+/* ── DARK MARQUEE ── */
+.marquee-section {
+  background: var(--obsidian);
+  border-top: 1px solid rgba(196,154,69,0.1);
+  border-bottom: 1px solid rgba(196,154,69,0.1);
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex; gap: 4rem;
+  animation: marquee 25s linear infinite;
+  white-space: nowrap;
+}
+.marquee-track span {
+  font-size: 0.65rem; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--ash);
+  flex-shrink: 0;
+}
+.marquee-track span i { color: var(--ember); margin-right: 1.5rem; }
+@keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
 
-        /* brand accent colors */
-        .accent-lumina   { color: var(--lumina); }
-        .accent-puresip  { color: var(--puresip); }
-        .accent-leather  { color: var(--leather); }
-        .accent-earthoven{ color: var(--earthoven); }
-        .accent-elara    { color: var(--elara); }
-        .bg-lumina   { background: rgba(176,125,58,0.1); }
-        .bg-puresip  { background: rgba(92,122,90,0.1); }
-        .bg-leather  { background: rgba(139,69,19,0.1); }
-        .bg-earthoven{ background: rgba(122,59,30,0.1); }
-        .bg-elara    { background: rgba(123,94,167,0.1); }
+/* ── ABOUT ── */
+.about-section {
+  background: var(--obsidian);
+  padding: 9rem 0;
+  text-align: center;
+}
+.about-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400; font-style: italic;
+  color: var(--parchment); margin-bottom: 1.5rem;
+}
+.about-section > .container > p {
+  max-width: 700px; margin: 0 auto 4rem;
+  font-size: 0.85rem; color: var(--fog); line-height: 2;
+}
+.pillars {
+  display: flex; justify-content: center;
+  gap: 5rem; flex-wrap: wrap; margin-top: 4rem;
+}
+.pillar { text-align: center; }
+.pillar-ico {
+  width: 52px; height: 52px;
+  border: 1px solid rgba(196,154,69,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--ember); font-size: 16px;
+}
+.pillar span {
+  font-size: 0.6rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ash);
+}
 
-        /* ── BRAND STORY PANELS ── */
-        .brand-story {
-            padding: 5rem 2rem;
-            border-top: 1px solid rgba(201,185,154,0.3);
-        }
-        .brand-story-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        .brand-story-inner.reverse { direction: rtl; }
-        .brand-story-inner.reverse > * { direction: ltr; }
-        .story-eyebrow {
-            font-size: 0.58rem;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-        .story-heading {
-            font-size: clamp(2.2rem, 4vw, 3.5rem);
-            font-weight: 300;
-            font-style: italic;
-            line-height: 1.2;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-        }
-        .story-body {
-            font-size: 0.85rem;
-            color: var(--mid);
-            line-height: 1.9;
-            margin-bottom: 2rem;
-        }
-        .story-products {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .story-product-item {
-            display: flex;
-            gap: 1.2rem;
-            align-items: flex-start;
-            padding: 1rem;
-            border: 1px solid rgba(201,185,154,0.3);
-        }
-        .story-product-num {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 300;
-            color: var(--sand);
-            line-height: 1;
-            min-width: 40px;
-        }
-        .story-product-title {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            font-style: italic;
-            color: var(--charcoal);
-            margin-bottom: 4px;
-        }
-        .story-product-desc {
-            font-size: 0.75rem;
-            color: var(--mid);
-            line-height: 1.6;
-        }
-        .story-visual {
-            position: relative;
-        }
-        .story-visual-box {
-            aspect-ratio: 3/4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .story-visual-bg {
-            position: absolute;
-            inset: 0;
-        }
-        .story-visual-icon {
-            font-size: 5rem;
-            position: relative;
-            z-index: 1;
-        }
-        .story-visual-label {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-style: italic;
-            font-weight: 300;
-            color: var(--charcoal);
-            position: relative;
-            z-index: 1;
-        }
-        .story-visual-url {
-            font-size: 0.6rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--mid);
-            position: relative;
-            z-index: 1;
-        }
-        .price-badge {
-            position: absolute;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            background: var(--ivory);
-            border: 1px solid rgba(201,185,154,0.5);
-            padding: 1rem 1.2rem;
-            text-align: center;
-        }
-        .price-badge .label {
-            font-size: 0.58rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--mid);
-            display: block;
-        }
-        .price-badge .amount {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--charcoal);
-            display: block;
-        }
+/* ── CONTACT ── */
+.contact-section { background: var(--carbon); padding: 7rem 0; }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: start;
+}
+.contact-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem; font-weight: 400; font-style: italic;
+  color: var(--parchment); margin-bottom: 2rem;
+}
+.info-row {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(196,154,69,0.1);
+  font-size: 0.8rem; color: var(--fog);
+}
+.info-row i { color: var(--ember); width: 18px; }
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.form-field { display: flex; flex-direction: column; gap: 7px; }
+.form-field label {
+  font-size: 0.58rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ash);
+}
+.form-field input,
+.form-field textarea {
+  border: 1px solid rgba(196,154,69,0.15);
+  background: rgba(255,255,255,0.03);
+  padding: 14px 18px; font-family: var(--font-body);
+  font-size: 0.83rem; color: var(--parchment);
+  outline: none; transition: border-color 0.22s;
+}
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(--ember); background: rgba(196,154,69,0.03); }
+.form-field textarea { resize: vertical; min-height: 120px; }
+input::placeholder, textarea::placeholder { color: var(--ash); }
 
-        /* ── PRICING TIER BLOCK ── */
-        .pricing-tiers {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-        .pricing-tier-row {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.8rem 1rem;
-            border-left: 2px solid;
-        }
-        .tier-name {
-            font-size: 0.65rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            font-weight: 500;
-            min-width: 120px;
-        }
-        .tier-desc {
-            font-size: 0.78rem;
-            color: var(--mid);
-            flex: 1;
-        }
+/* ── FOOTER ── */
+footer {
+  background: var(--obsidian);
+  border-top: 1px solid rgba(196,154,69,0.12);
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+.footer-brands {
+  font-family: var(--font-display);
+  font-size: 0.68rem; letter-spacing: 0.24em;
+  color: var(--ash); text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+footer > p:last-child {
+  font-size: 0.65rem; color: rgba(138,128,112,0.55); letter-spacing: 0.1em;
+}
 
-        /* ── ABOUT ── */
-        .about-section {
-            background: var(--charcoal);
-            color: var(--cream);
-            padding: 7rem 2rem;
-            text-align: center;
-        }
-        .about-section .divider { background: rgba(201,185,154,0.4); }
-        .about-section h2 {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 300;
-            font-style: italic;
-            color: var(--cream);
-            margin-bottom: 1.5rem;
-        }
-        .about-section p {
-            max-width: 680px;
-            margin: 0 auto 3rem;
-            font-size: 0.87rem;
-            color: rgba(245,242,237,0.65);
-            line-height: 1.9;
-        }
-        .about-pillars {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-        .about-pillar {
-            text-align: center;
-        }
-        .about-pillar i {
-            color: var(--gold);
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-        .about-pillar span {
-            font-size: 0.65rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: rgba(245,242,237,0.55);
-        }
+/* ── CART DRAWER ── */
+.cart-overlay {
+  position: fixed; inset: 0;
+  background: rgba(13,12,10,0.6); z-index: 300;
+  display: none; backdrop-filter: blur(4px);
+}
+.cart-overlay.open { display: block; }
+.cart-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 420px; background: var(--ink);
+  border-left: 1px solid rgba(196,154,69,0.15);
+  z-index: 301; transform: translateX(100%);
+  transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+  display: flex; flex-direction: column;
+}
+.cart-drawer.open { transform: translateX(0); }
+.cart-head {
+  padding: 2rem 1.8rem;
+  border-bottom: 1px solid rgba(196,154,69,0.12);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.cart-head h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 400; font-style: italic;
+  color: var(--parchment);
+}
+.cart-body { flex: 1; overflow-y: auto; padding: 1.8rem; }
+.cart-empty-msg {
+  text-align: center; padding: 3rem 0;
+  font-size: 0.78rem; color: var(--ash); letter-spacing: 0.1em;
+}
+.cart-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 0; border-bottom: 1px solid rgba(196,154,69,0.08);
+}
+.ci-name {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 0.9rem; color: var(--parchment);
+}
+.ci-price { font-size: 0.75rem; color: var(--ember); margin-top: 4px; }
+.ci-remove { color: var(--ash); cursor: pointer; font-size: 12px; transition: color 0.2s; }
+.ci-remove:hover { color: var(--rose); }
+.cart-foot {
+  padding: 1.8rem;
+  border-top: 1px solid rgba(196,154,69,0.12);
+}
+.cart-total-row {
+  display: flex; justify-content: space-between;
+  align-items: baseline; margin-bottom: 1.5rem;
+}
+.ct-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ash); }
+.ct-amount { font-family: var(--font-display); font-size: 1.8rem; color: var(--parchment); }
 
-        /* ── CONTACT ── */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-        }
-        .contact-info-row {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(201,185,154,0.3);
-            font-size: 0.82rem;
-        }
-        .contact-info-row i { color: var(--amber); width: 18px; }
-        .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-        .form-field { display: flex; flex-direction: column; gap: 6px; }
-        .form-field label {
-            font-size: 0.6rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--mid);
-        }
-        .form-field input,
-        .form-field textarea {
-            border: 1px solid rgba(201,185,154,0.5);
-            background: var(--ivory);
-            padding: 12px 16px;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            color: var(--charcoal);
-            outline: none;
-            transition: border-color .2s;
-        }
-        .form-field input:focus,
-        .form-field textarea:focus { border-color: var(--amber); }
-        .form-field textarea { resize: vertical; min-height: 110px; }
+/* color accents */
+.c-lumina    { color: var(--lumina); }
+.c-puresip   { color: var(--puresip); }
+.c-leather   { color: var(--leather); }
+.c-earthoven { color: var(--earthoven); }
+.c-elara     { color: var(--elara); }
 
-        /* ── FOOTER ── */
-        footer {
-            background: var(--warm);
-            border-top: 1px solid rgba(201,185,154,0.4);
-            padding: 2.5rem 2rem;
-            text-align: center;
-        }
-        .footer-brands {
-            font-family: var(--font-display);
-            font-size: 0.65rem;
-            letter-spacing: 0.22em;
-            color: var(--sand);
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-        footer p {
-            font-size: 0.7rem;
-            color: var(--mid);
-            letter-spacing: 0.08em;
-        }
-
-        /* ── CART DRAWER ── */
-        .cart-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(44,43,40,0.4);
-            z-index: 200;
-            display: none;
-        }
-        .cart-overlay.open { display: block; }
-        .cart-drawer {
-            position: fixed;
-            top: 0; right: 0; bottom: 0;
-            width: 420px;
-            background: var(--ivory);
-            border-left: 1px solid rgba(201,185,154,0.4);
-            z-index: 201;
-            transform: translateX(100%);
-            transition: transform .35s cubic-bezier(.4,0,.2,1);
-            display: flex;
-            flex-direction: column;
-        }
-        .cart-drawer.open { transform: translateX(0); }
-        .cart-header {
-            padding: 1.75rem 1.5rem;
-            border-bottom: 1px solid rgba(201,185,154,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .cart-header h3 {
-            font-size: 1.4rem;
-            font-weight: 300;
-            font-style: italic;
-        }
-        .cart-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
-        .cart-empty {
-            text-align: center;
-            padding: 3rem 0;
-            font-size: 0.8rem;
-            color: var(--mid);
-            letter-spacing: 0.08em;
-        }
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(201,185,154,0.2);
-        }
-        .cart-item-name { font-size: 0.82rem; font-family: var(--font-display); font-style: italic; }
-        .cart-item-price { font-size: 0.75rem; color: var(--amber); margin-top: 3px; }
-        .cart-remove { color: var(--sand); cursor: pointer; font-size: 12px; transition: color .2s; }
-        .cart-remove:hover { color: var(--rust); }
-        .cart-footer {
-            padding: 1.5rem;
-            border-top: 1px solid rgba(201,185,154,0.3);
-        }
-        .cart-total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.2rem;
-        }
-        .cart-total-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); }
-        .cart-total-amount { font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 900px) {
-            nav { display: none; }
-            #hamburger { display: flex !important; }
-            .brand-story-inner { grid-template-columns: 1fr; gap: 3rem; }
-            .brand-story-inner.reverse { direction: ltr; }
-            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .cart-drawer { width: 100%; }
-            .story-visual-box { aspect-ratio: 16/9; }
-        }
-        @media (max-width: 640px) {
-            .brands-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.8rem; }
-        }
-
-        /* hidden hamburger on desktop */
-        #hamburger { display: none; }
-
-        /* dark mode */
-        body.dark {
-            --cream:    #1A1916;
-            --ivory:    #211F1C;
-            --warm:     #252320;
-            --charcoal: #EDE8DF;
-            --mid:      #9A9284;
-            --sand:     #6B5F4C;
-            --header-bg: rgba(33,31,28,0.94);
-        }
-    </style>
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .brands-grid { grid-template-columns: repeat(3,1fr); }
+  .brand-card { border-bottom: 1px solid rgba(196,154,69,0.1); }
+  .story-inner { grid-template-columns: 1fr; min-height: auto; }
+  .story-inner.flip { direction: ltr; }
+  .story-image { min-height: 400px; }
+  .story-content { padding: 4rem 3rem; }
+}
+@media (max-width: 860px) {
+  nav { display: none; }
+  #hamburger { display: flex !important; }
+  .brands-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  .catalog-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  .brands-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 3rem; }
+  .cart-drawer { width: 100%; }
+  .story-content { padding: 3rem 2rem; }
+}
+</style>
 </head>
 <body>
 
-<!-- ═══════════════ HEADER ═══════════════ -->
+<!-- ═══ HEADER ═══ -->
 <header>
-    <div class="header-inner">
-        <a href="index.html" class="logo-mark" style="text-decoration:none;">
-            <div class="logo-icon"><i class="fa-solid fa-star-of-life"></i></div>
-            <div>
-                <span class="logo-text">Premium Brands</span>
-                <span class="logo-sub" id="storeSub" data-lang="logo-sub">Five Exceptional Brands, One Destination</span>
-            </div>
-        </a>
-
-        <nav>
-            <a href="index.html" data-lang="nav-home">Home</a>
-            <a href="index.html#brands" data-lang="nav-brands">Brands</a>
-            <a href="index.html#catalog" data-lang="nav-catalog">Catalog</a>
-            <a href="index.html#stories" data-lang="nav-collection">Collection</a>
-            <a href="about.html" data-lang="nav-about">About</a>
-            <a href="index.html#contact" data-lang="nav-contact">Contact</a>
-            <a href="blog.html" data-lang="nav-blog">Blog</a>
-        </nav>
-
-        <div class="header-actions">
-            <button class="btn-icon" id="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open-nav')" style="display:none;"><i class="fa-solid fa-bars"></i></button>
-            <button class="btn-icon" id="themeBtn" title="Toggle theme"><i class="fa-regular fa-moon" id="themeIcon"></i></button>
-            <button class="btn-icon" id="langBtn" title="Language" style="font-size:10px;letter-spacing:.12em;">AM</button>
-            <button class="btn-icon" id="cartBtn" title="Cart">
-                <i class="fa-solid fa-basket-shopping"></i>
-                <span class="cart-badge" id="cartBadge">0</span>
-            </button>
-            <button class="btn-pill filled" id="authBtn"><span id="authBtnLabel" data-lang="auth-login">Login</span></button>
-        </div>
+  <div class="header-inner">
+    <a href="#" class="logo-wrap">
+      <div class="logo-gem"><i class="fa-solid fa-star-of-life"></i></div>
+      <div>
+        <span class="logo-name">Premium Brands</span>
+        <span class="logo-tagline" id="logoSub" data-lang="logo-sub">Five Exceptional Brands, One Destination</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#" data-lang="nav-home">Home</a>
+      <a href="#brands" data-lang="nav-brands">Brands</a>
+      <a href="#catalog" data-lang="nav-catalog">Catalog</a>
+      <a href="#stories" data-lang="nav-collection">Collection</a>
+      <a href="#contact" data-lang="nav-contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-ico" id="hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      <button class="btn-ico" id="themeBtn" title="Toggle theme"><i class="fa-regular fa-moon" id="themeIcon"></i></button>
+      <button class="btn-ico" id="langBtn" style="font-size:10px;letter-spacing:.12em;font-weight:600;" title="Language">AM</button>
+      <button class="btn-ico" id="cartBtn" title="Cart">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="btn-solid" id="authBtn"><span id="authLabel" data-lang="auth-login">Login</span></button>
     </div>
+  </div>
 </header>
 
-<div id="mobileNav" class="mobile-nav" style="display:none;">
-    <a href="index.html" onclick="closeMobile()" data-lang="nav-home">Home</a>
-    <a href="index.html#brands" onclick="closeMobile()" data-lang="nav-brands">Our Brands</a>
-    <a href="index.html#catalog" onclick="closeMobile()" data-lang="nav-catalog">Catalog</a>
-    <a href="index.html#stories" onclick="closeMobile()" data-lang="nav-collection">Collection</a>
-    <a href="about.html" onclick="closeMobile()" data-lang="nav-about">About</a>
-    <a href="index.html#contact" onclick="closeMobile()" data-lang="nav-contact">Contact</a>
-    <a href="blog.html" onclick="closeMobile()" data-lang="nav-blog">Blog</a>
+<div id="mobileNav" class="mobile-nav">
+  <a href="#" onclick="closeMobile()" data-lang="nav-home">Home</a>
+  <a href="#brands" onclick="closeMobile()" data-lang="nav-brands">Brands</a>
+  <a href="#catalog" onclick="closeMobile()" data-lang="nav-catalog">Catalog</a>
+  <a href="#stories" onclick="closeMobile()" data-lang="nav-collection">Collection</a>
+  <a href="#contact" onclick="closeMobile()" data-lang="nav-contact">Contact</a>
 </div>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section id="hero" class="hero">
-    <div>
-        <p class="hero-eyebrow" data-lang="hero-eyebrow">Curated · Authentic · Ethiopian</p>
-        <h1 data-lang="hero-title">Four Exceptional Brands,<br><em>One Destination</em></h1>
-        <p class="hero-desc" data-lang="hero-desc">Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.</p>
-
-        <div class="hero-brand-strip">
-            <span class="hero-brand-chip" data-lang="chip-lumina">Lumina</span>
-            <span class="hero-brand-chip" data-lang="chip-puresip">PureSip</span>
-            <span class="hero-brand-chip" data-lang="chip-leather">Artisan Leather</span>
-            <span class="hero-brand-chip" data-lang="chip-earthoven">Earth & Oven</span>
-            <span class="hero-brand-chip" data-lang="chip-elara">Elara Hair</span>
-        </div>
-
-        <div class="hero-ctas">
-            <a href="#catalog" class="btn-pill filled" data-lang="hero-cta-1">Explore Catalog</a>
-            <a href="#brands" class="btn-pill" data-lang="hero-cta-2">Meet the Brands</a>
-        </div>
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-content">
+    <div class="hero-emblem"><i class="fa-solid fa-star-of-life"></i></div>
+    <span class="hero-sup" data-lang="hero-eyebrow">Curated · Authentic · Ethiopian</span>
+    <h1 data-lang="hero-h1">Five Exceptional<br>Brands,&nbsp;<em>One</em></h1>
+    <p class="hero-sub" data-lang="hero-sub">Destination.</p>
+    <p class="hero-desc" data-lang="hero-desc">Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.</p>
+    <div class="brand-chips">
+      <span class="chip" onclick="filterBrand('Lumina')" data-lang="chip-lumina">Lumina</span>
+      <span class="chip" onclick="filterBrand('PureSip')" data-lang="chip-puresip">PureSip</span>
+      <span class="chip" onclick="filterBrand('Artisan Leather')" data-lang="chip-leather">Artisan Leather</span>
+      <span class="chip" onclick="filterBrand('Earth & Oven')" data-lang="chip-earthoven">Earth & Oven</span>
+      <span class="chip" onclick="filterBrand('Elara Hair')" data-lang="chip-elara">Elara Hair</span>
     </div>
+    <div class="hero-ctas">
+      <a href="#catalog" class="btn-solid" data-lang="hero-cta1">Explore Catalog</a>
+      <a href="#brands" class="btn-outline" data-lang="hero-cta2">Meet the Brands</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span data-lang="hero-scroll">Scroll</span></div>
 </section>
 
-<!-- ═══════════════ BRANDS ═══════════════ -->
-<section id="brands" class="section" style="padding-top:5rem;padding-bottom:5rem;">
-    <div class="container">
-        <div class="section-header">
-            <h2 data-lang="brands-title">Our Brand Portfolio</h2>
-            <div class="divider"></div>
-            <p data-lang="brands-sub">Five brands · One shared philosophy of quality</p>
-        </div>
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <span><i class="fa-solid fa-gem"></i>Lumina Lighting</span>
+    <span><i class="fa-solid fa-gem"></i>PureSip Wellness</span>
+    <span><i class="fa-solid fa-gem"></i>Artisan Leather</span>
+    <span><i class="fa-solid fa-gem"></i>Earth &amp; Oven</span>
+    <span><i class="fa-solid fa-gem"></i>Elara Hair</span>
+    <span><i class="fa-solid fa-gem"></i>Premium Ethiopian Brands</span>
+    <span><i class="fa-solid fa-gem"></i>Lumina Lighting</span>
+    <span><i class="fa-solid fa-gem"></i>PureSip Wellness</span>
+    <span><i class="fa-solid fa-gem"></i>Artisan Leather</span>
+    <span><i class="fa-solid fa-gem"></i>Earth &amp; Oven</span>
+    <span><i class="fa-solid fa-gem"></i>Elara Hair</span>
+    <span><i class="fa-solid fa-gem"></i>Premium Ethiopian Brands</span>
+  </div>
+</div>
 
-        <div class="brands-grid">
-
-            <div class="brand-card">
-                <div class="brand-number" data-lang="b01-num">01 / 05</div>
-                <div class="brand-icon bg-lumina accent-lumina"><i class="fa-solid fa-lightbulb"></i></div>
-                <h3 class="accent-lumina" data-lang="b01-name">Lumina</h3>
-                <span class="brand-tag" data-lang="b01-tag">Lighting · Presented by Betelihem Getaneh</span>
-                <p data-lang="b01-desc">Shaping moods through mindful design and sustainability — where light becomes an immersive experience. Architectural fixtures crafted for the modern interior.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Lumina')" data-lang="b01-link">View Collection →</a>
-            </div>
-
-            <div class="brand-card">
-                <div class="brand-number" data-lang="b02-num">02 / 05</div>
-                <div class="brand-icon bg-puresip accent-puresip"><i class="fa-solid fa-bottle-droplet"></i></div>
-                <h3 class="accent-puresip" data-lang="b02-name">PureSip</h3>
-                <span class="brand-tag" data-lang="b02-tag">Cold-Pressed Juices · reallygreatsip.com</span>
-                <p data-lang="b02-desc">A refreshing natural journey. 100% organic fruits, zero additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('PureSip')" data-lang="b02-link">View Elixirs →</a>
-            </div>
-
-            <div class="brand-card">
-                <div class="brand-number" data-lang="b03-num">03 / 05</div>
-                <div class="brand-icon bg-leather accent-leather"><i class="fa-solid fa-bag-shopping"></i></div>
-                <h3 class="accent-leather" data-lang="b03-name">Artisan Leather</h3>
-                <span class="brand-tag" data-lang="b03-tag">Luxury Goods · artisanleather.com</span>
-                <p data-lang="b03-desc">Uncompromising quality in every handcrafted detail. 100% top-grain Ethiopian leather — rich textures, impeccable stitching, and timeless elegance by local artisans.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Artisan Leather')" data-lang="b03-link">View Goods →</a>
-            </div>
-
-            <div class="brand-card">
-                <div class="brand-number" data-lang="b04-num">04 / 05</div>
-                <div class="brand-icon bg-earthoven accent-earthoven"><i class="fa-solid fa-jar"></i></div>
-                <h3 class="accent-earthoven" data-lang="b04-name">Earth & Oven</h3>
-                <span class="brand-tag" data-lang="b04-tag">Gourmet Foods · Gourmet, Naturally.</span>
-                <p data-lang="b04-desc">Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet ready-to-eat grains — crafted with organic ingredients for the health-conscious kitchen.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Earth & Oven')" data-lang="b04-link">View Gourmet →</a>
-            </div>
-
-            <div class="brand-card">
-                <div class="brand-number" data-lang="b05-num">05 / 05</div>
-                <div class="brand-icon bg-elara accent-elara"><i class="fa-solid fa-spa"></i></div>
-                <h3 class="accent-elara" data-lang="b05-name">Elara Hair</h3>
-                <span class="brand-tag" data-lang="b05-tag">Natural Hair Care · elarahair.com</span>
-                <p data-lang="b05-desc">Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments that honour your natural texture without compromise.</p>
-                <a href="#catalog" class="brand-link" onclick="filterBrand('Elara Hair')" data-lang="b05-link">View Hair Care →</a>
-            </div>
-
-        </div>
+<!-- ═══ BRANDS ═══ -->
+<section id="brands" class="section brands-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Portfolio</span>
+      <div class="gold-rule"><span data-lang="brands-rule">Our Brands</span></div>
+      <h2 data-lang="brands-title">Five Brands, One Philosophy</h2>
+      <p data-lang="brands-sub">Curated excellence across five distinct Ethiopian lifestyle categories</p>
     </div>
+    <div class="brands-grid">
+
+      <div class="brand-card c-lumina" onclick="filterBrand('Lumina')">
+        <div class="brand-num">01</div>
+        <div class="brand-icon-ring c-lumina"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3 class="c-lumina" data-lang="b01-name">Lumina</h3>
+        <span class="brand-niche" data-lang="b01-tag">Luxury Lighting</span>
+        <p data-lang="b01-desc">Where light becomes an immersive experience. Architectural fixtures engineered to shape mood, softening the morning and anchoring the evening.</p>
+        <a href="#catalog" class="brand-action c-lumina" onclick="filterBrand('Lumina')" data-lang="b01-link">View Collection →</a>
+      </div>
+
+      <div class="brand-card c-puresip" onclick="filterBrand('PureSip')">
+        <div class="brand-num">02</div>
+        <div class="brand-icon-ring c-puresip"><i class="fa-solid fa-bottle-droplet"></i></div>
+        <h3 class="c-puresip" data-lang="b02-name">PureSip</h3>
+        <span class="brand-niche" data-lang="b02-tag">Cold-Pressed Wellness</span>
+        <p data-lang="b02-desc">100% organic fruits, zero additives, zero added sugar. Pure, nutrient-rich goodness packed with essential vitamins and antioxidants.</p>
+        <a href="#catalog" class="brand-action c-puresip" onclick="filterBrand('PureSip')" data-lang="b02-link">View Elixirs →</a>
+      </div>
+
+      <div class="brand-card c-leather" onclick="filterBrand('Artisan Leather')">
+        <div class="brand-num">03</div>
+        <div class="brand-icon-ring c-leather"><i class="fa-solid fa-bag-shopping"></i></div>
+        <h3 class="c-leather" data-lang="b03-name">Artisan Leather</h3>
+        <span class="brand-niche" data-lang="b03-tag">Luxury Goods</span>
+        <p data-lang="b03-desc">100% top-grain Ethiopian leather. Rich textures, impeccable stitching, and timeless elegance crafted entirely by local artisans.</p>
+        <a href="#catalog" class="brand-action c-leather" onclick="filterBrand('Artisan Leather')" data-lang="b03-link">View Goods →</a>
+      </div>
+
+      <div class="brand-card c-earthoven" onclick="filterBrand('Earth & Oven')">
+        <div class="brand-num">04</div>
+        <div class="brand-icon-ring c-earthoven"><i class="fa-solid fa-jar"></i></div>
+        <h3 class="c-earthoven" data-lang="b04-name">Earth & Oven</h3>
+        <span class="brand-niche" data-lang="b04-tag">Gourmet Foods</span>
+        <p data-lang="b04-desc">Redefining premium processed foods. Artisanal sauces, preserves, and gourmet grains crafted with organic ingredients for the health-conscious kitchen.</p>
+        <a href="#catalog" class="brand-action c-earthoven" onclick="filterBrand('Earth & Oven')" data-lang="b04-link">View Gourmet →</a>
+      </div>
+
+      <div class="brand-card c-elara" onclick="filterBrand('Elara Hair')">
+        <div class="brand-num">05</div>
+        <div class="brand-icon-ring c-elara"><i class="fa-solid fa-spa"></i></div>
+        <h3 class="c-elara" data-lang="b05-name">Elara Hair</h3>
+        <span class="brand-niche" data-lang="b05-tag">Natural Hair Care</span>
+        <p data-lang="b05-desc">Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments for your natural texture.</p>
+        <a href="#catalog" class="brand-action c-elara" onclick="filterBrand('Elara Hair')" data-lang="b05-link">View Hair Care →</a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<!-- ═══════════════ CATALOG ═══════════════ -->
-<section id="catalog" class="section catalog-bg">
-    <div class="container">
-        <div class="section-header">
-            <h2 data-lang="cat-title">The Premium Catalog</h2>
-            <div class="divider"></div>
-            <p data-lang="cat-sub">All products across every brand</p>
-        </div>
-
-        <div class="catalog-tabs">
-            <button class="tab-btn active" onclick="filterBrand('All',this)" data-lang="tab-all">All Products</button>
-            <button class="tab-btn" onclick="filterBrand('Lumina',this)" data-lang="tab-lumina">Lumina</button>
-            <button class="tab-btn" onclick="filterBrand('PureSip',this)" data-lang="tab-puresip">PureSip</button>
-            <button class="tab-btn" onclick="filterBrand('Artisan Leather',this)" data-lang="tab-leather">Artisan Leather</button>
-            <button class="tab-btn" onclick="filterBrand('Earth & Oven',this)" data-lang="tab-earthoven">Earth & Oven</button>
-            <button class="tab-btn" onclick="filterBrand('Elara Hair',this)" data-lang="tab-elara">Elara Hair</button>
-        </div>
-
-        <div class="catalog-grid" id="catalogGrid">
-
-            <!-- ── LUMINA ── -->
-            <div class="product-card" data-brand="Lumina">
-                <img class="product-img" src="https://www.homesake.in/cdn/shop/files/IH0F253-BK-PWT_Theme2.jpg?v=1757399379&width=1920" alt="Architectural Floor Lamp" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-lumina">Lumina Lighting</span>
-                        <span class="product-id">#002</span>
-                    </div>
-                    <h4>Architectural Floor Lamp</h4>
-                    <p>Slender brass structures meet focused, functional lighting. A statement of style and practicality, bringing refined illumination to living spaces and reading corners.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Premium Tier</span>
-                        <div class="product-price">5,800 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Architectural Floor Lamp',5800)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <!-- ── PURESIP ── -->
-            <div class="product-card" data-brand="PureSip">
-                <img class="product-img" src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=400&q=80" alt="Citrus Blast" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-puresip">PureSip Wellness</span>
-                        <span class="product-id">#001</span>
-                    </div>
-                    <h4>Citrus Blast</h4>
-                    <p>Packed with Vitamin C from 100% organic citrus fruits. No sugar added, no additives — just pure, zesty refreshment that energises your day and boosts your immune system naturally.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Single-Serve</span>
-                        <div class="product-price">185 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Citrus Blast',185)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="PureSip">
-                <img class="product-img" src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=400&q=80" alt="Green Detox" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-puresip">PureSip Wellness</span>
-                        <span class="product-id">#002</span>
-                    </div>
-                    <h4>Green Detox</h4>
-                    <p>A powerful blend of kale, spinach, and apple. Rich in antioxidants and essential vitamins, this cold-pressed detox juice cleanses and revitalises with every sip. 100% organic.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Cold-Pressed</span>
-                        <div class="product-price">220 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Green Detox',220)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="PureSip">
-                <img class="product-img" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80" alt="Berry Antioxidant" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-puresip">PureSip Wellness</span>
-                        <span class="product-id">#003</span>
-                    </div>
-                    <h4>Berry Antioxidant</h4>
-                    <p>Rich in dark berries bursting with antioxidants. This nutrient-dense blend supports wellness and immunity with authentic taste and zero additives. Pure nature in every bottle.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Standard Bottle</span>
-                        <div class="product-price">240 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Berry Antioxidant',240)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="PureSip">
-                <img class="product-img" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=400&q=80" alt="Wellness Bundle" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-puresip">PureSip Wellness</span>
-                        <span class="product-id">#004</span>
-                    </div>
-                    <h4>Premium Wellness Bundle</h4>
-                    <p>A curated multi-pack of three cold-pressed organic blends — Citrus Blast, Green Detox, and Berry Antioxidant — delivered weekly to your door with exclusive subscription savings.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Bundle · Save More</span>
-                        <div class="product-price">580 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Wellness Bundle',580)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <!-- ── ARTISAN LEATHER ── -->
-            <div class="product-card" data-brand="Artisan Leather">
-                <img class="product-img" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80" alt="Heritage Tote" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-leather">Artisan Leather</span>
-                        <span class="product-id">#001</span>
-                    </div>
-                    <h4>Heritage Tote</h4>
-                    <p>Spacious luxury bag for everyday use. Crafted from 100% top-grain Ethiopian leather with rich textures and impeccable stitching — the perfect blend of elegance and functionality.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Artisanal Masterpiece</span>
-                        <div class="product-price">9,500 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Heritage Tote',9500)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Artisan Leather">
-                <img class="product-img" src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=400&q=80" alt="Executive Wallet" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-leather">Artisan Leather</span>
-                        <span class="product-id">#002</span>
-                    </div>
-                    <h4>Executive Wallet</h4>
-                    <p>Slim design with RFID protection features. Handcrafted from premium Ethiopian leather, this wallet offers modern security with timeless style. Fits cards, cash, and essentials effortlessly.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Secure Classic</span>
-                        <div class="product-price">2,200 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Executive Wallet',2200)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Artisan Leather">
-                <img class="product-img" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80" alt="Travel Companion" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-leather">Artisan Leather</span>
-                        <span class="product-id">#003</span>
-                    </div>
-                    <h4>Travel Companion</h4>
-                    <p>Organiser for passports and essential accessories. Designed for the discerning traveller, this handcrafted leather organiser keeps documents secure and accessible in luxurious style.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Traveller's Essential</span>
-                        <div class="product-price">3,400 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Travel Companion',3400)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <!-- ── EARTH & OVEN ── -->
-            <div class="product-card" data-brand="Earth & Oven">
-                <img class="product-img" src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=400&q=80" alt="Artisanal Sauces" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-earthoven">Earth & Oven</span>
-                        <span class="product-id">#001</span>
-                    </div>
-                    <h4>Artisanal Sauces</h4>
-                    <p>Slowly simmered with organic herbs and wholesome ingredients. Elevates every meal with rich, complex flavours and effortless convenience for your kitchen.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Entry Access</span>
-                        <div class="product-price">450 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Artisanal Sauces',450)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Earth & Oven">
-                <img class="product-img" src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=400&q=80" alt="Fruit Preserves" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-earthoven">Earth & Oven</span>
-                        <span class="product-id">#002</span>
-                    </div>
-                    <h4>Premium Fruit Preserves</h4>
-                    <p>Bursting with rich natural fruit chunks and vibrant flavours. Perfect for toast, pastries, or desserts — a delightful taste of pure, wholesome goodness every morning.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Organic Preserve</span>
-                        <div class="product-price">380 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Fruit Preserves',380)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Earth & Oven">
-                <img class="product-img" src="https://images.unsplash.com/photo-1547058881-aa0edd92aab3?auto=format&fit=crop&w=400&q=80" alt="Gourmet Grains" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-earthoven">Earth & Oven</span>
-                        <span class="product-id">#003</span>
-                    </div>
-                    <h4>Gourmet Ready-to-Eat Grains</h4>
-                    <p>Perfectly seasoned and steam-sealed for freshness. A quick, nutritious, and delicious meal option crafted for busy lifestyles without compromising on quality.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">Premium Tier</span>
-                        <div class="product-price">520 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Gourmet Grains',520)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <!-- ── ELARA HAIR ── -->
-            <div class="product-card" data-brand="Elara Hair">
-                <img class="product-img" src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" alt="Black Castor Shampoo" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-elara">Elara Hair</span>
-                        <span class="product-id">#001</span>
-                    </div>
-                    <h4>Black Castor Shampoo</h4>
-                    <p>A sulphate-free cleansing shampoo infused with Ethiopian black castor oil and rosemary extract. Strengthens the hair shaft, reduces breakage, and restores natural lustre with every wash.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">250ml · Daily Care</span>
-                        <div class="product-price">320 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Black Castor Shampoo',320)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Elara Hair">
-                <img class="product-img" src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=400&q=80" alt="Moringa Scalp Oil" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-elara">Elara Hair</span>
-                        <span class="product-id">#002</span>
-                    </div>
-                    <h4>Moringa Scalp Oil</h4>
-                    <p>Cold-pressed moringa and nigella sativa oil blended to nourish the scalp directly at the root. Reduces flaking, stimulates growth, and imparts a healthy sheen without greasiness.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">100ml · Treatment</span>
-                        <div class="product-price">490 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Moringa Scalp Oil',490)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-brand="Elara Hair">
-                <img class="product-img" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" alt="Restorative Hair Mask" loading="lazy">
-                <div class="product-card-body">
-                    <div class="product-meta">
-                        <span class="product-brand-label accent-elara">Elara Hair</span>
-                        <span class="product-id">#003</span>
-                    </div>
-                    <h4>Restorative Hair Mask</h4>
-                    <p>A deep conditioning treatment rich in shea butter, aloe vera, and Ethiopian honey. Repairs heat and chemical damage, restores elasticity, and leaves hair visibly softer after one use.</p>
-                </div>
-                <div class="product-card-footer">
-                    <div>
-                        <span class="product-price-label">200ml · Deep Repair</span>
-                        <div class="product-price">560 ETB</div>
-                    </div>
-                    <button class="add-btn" onclick="addToCart('Restorative Hair Mask',560)"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-            </div>
-
-        </div><!-- /catalogGrid -->
+<!-- ═══ CATALOG — 5 PRODUCTS, ONE PER BRAND ═══ -->
+<section id="catalog" class="section catalog-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Catalog</span>
+      <div class="gold-rule"><span data-lang="cat-rule">Products</span></div>
+      <h2 data-lang="cat-title">The Premium Catalog</h2>
+      <p data-lang="cat-sub">One signature product per brand — each a pinnacle of its craft</p>
     </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterBrand('All',this)" data-lang="tab-all">All</button>
+      <button class="filter-btn" onclick="filterBrand('Lumina',this)" data-lang="tab-lumina">Lumina</button>
+      <button class="filter-btn" onclick="filterBrand('PureSip',this)" data-lang="tab-puresip">PureSip</button>
+      <button class="filter-btn" onclick="filterBrand('Artisan Leather',this)" data-lang="tab-leather">Artisan Leather</button>
+      <button class="filter-btn" onclick="filterBrand('Earth & Oven',this)" data-lang="tab-earthoven">Earth & Oven</button>
+      <button class="filter-btn" onclick="filterBrand('Elara Hair',this)" data-lang="tab-elara">Elara Hair</button>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid">
+
+      <!-- LUMINA -->
+      <div class="product-card" data-brand="Lumina">
+        <div class="product-img-wrap">
+          <img class="product-img"
+            src="https://images.unsplash.com/photo-1513506003901-1e6a35703dc2?auto=format&fit=crop&w=700&q=80"
+            alt="Eclipse Chandelier" loading="lazy">
+          <span class="product-brand-tag c-lumina">Lumina</span>
+        </div>
+        <div class="product-body">
+          <span class="product-id">#LM — 001</span>
+          <h4>Eclipse Chandelier</h4>
+          <p>A suspended constellation of hand-spun brass rings and frosted crystal diffusers. Each fixture is assembled entirely by hand, transforming dining spaces and entrance halls into environments defined by refined, directional light.</p>
+        </div>
+        <div class="product-foot">
+          <div class="price-block">
+            <span class="price-label">Signature Piece</span>
+            <span class="price">14,500 ETB</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Eclipse Chandelier',14500)"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+      </div>
+
+      <!-- PURESIP -->
+      <div class="product-card" data-brand="PureSip">
+        <div class="product-img-wrap">
+          <img class="product-img"
+            src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=700&q=80"
+            alt="Wellness Bundle" loading="lazy">
+          <span class="product-brand-tag c-puresip">PureSip</span>
+        </div>
+        <div class="product-body">
+          <span class="product-id">#PS — 001</span>
+          <h4>Premium Wellness Bundle</h4>
+          <p>A curated trio of cold-pressed organic blends — Citrus Blast, Green Detox, and Berry Antioxidant. Delivered weekly to your door, each bottle contains 100% organic fruits with zero additives, zero added sugar, and maximum nutritional density.</p>
+        </div>
+        <div class="product-foot">
+          <div class="price-block">
+            <span class="price-label">Bundle · Save More</span>
+            <span class="price">580 ETB</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Premium Wellness Bundle',580)"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+      </div>
+
+      <!-- ARTISAN LEATHER -->
+      <div class="product-card" data-brand="Artisan Leather">
+        <div class="product-img-wrap">
+          <img class="product-img"
+            src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80"
+            alt="Heritage Tote" loading="lazy">
+          <span class="product-brand-tag c-leather">Artisan Leather</span>
+        </div>
+        <div class="product-body">
+          <span class="product-id">#AL — 001</span>
+          <h4>Heritage Tote</h4>
+          <p>Spacious luxury for everyday life. Crafted entirely from 100% top-grain Ethiopian leather by local artisans using eco-safe tanning processes. Impeccable saddle stitching, solid brass hardware, and a silhouette that only improves with age.</p>
+        </div>
+        <div class="product-foot">
+          <div class="price-block">
+            <span class="price-label">Artisanal Masterpiece</span>
+            <span class="price">9,500 ETB</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Heritage Tote',9500)"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+      </div>
+
+      <!-- EARTH & OVEN -->
+      <div class="product-card" data-brand="Earth & Oven">
+        <div class="product-img-wrap">
+          <img class="product-img"
+            src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=700&q=80"
+            alt="Artisanal Sauces" loading="lazy">
+          <span class="product-brand-tag c-earthoven">Earth & Oven</span>
+        </div>
+        <div class="product-body">
+          <span class="product-id">#EO — 001</span>
+          <h4>Artisanal Sauce Collection</h4>
+          <p>Three slowly simmered sauces crafted with certified organic herbs and wholesome ingredients. Complex, layered flavour built over hours in small batches — the kind that elevates a simple weeknight meal into something memorable.</p>
+        </div>
+        <div class="product-foot">
+          <div class="price-block">
+            <span class="price-label">Gourmet Collection</span>
+            <span class="price">450 ETB</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Artisanal Sauce Collection',450)"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+      </div>
+
+      <!-- ELARA HAIR -->
+      <div class="product-card" data-brand="Elara Hair">
+        <div class="product-img-wrap">
+          <img class="product-img"
+            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=700&q=80"
+            alt="Restorative Hair Mask" loading="lazy">
+          <span class="product-brand-tag c-elara">Elara Hair</span>
+        </div>
+        <div class="product-body">
+          <span class="product-id">#EH — 001</span>
+          <h4>Restorative Hair Mask</h4>
+          <p>A deep conditioning ritual rich in Ethiopian shea butter, cold-pressed aloe vera, and wild highland honey. Repairs heat and chemical damage, restores elasticity, and leaves hair visibly softer after a single use. Sulphate-free, paraben-free, cruelty-free.</p>
+        </div>
+        <div class="product-foot">
+          <div class="price-block">
+            <span class="price-label">200ml · Deep Repair</span>
+            <span class="price">560 ETB</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Restorative Hair Mask',560)"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+      </div>
+
+    </div><!-- /catalogGrid -->
+  </div>
 </section>
 
-<!-- ═══════════════ BRAND STORIES ═══════════════ -->
-<section id="stories">
+<!-- ═══ BRAND STORIES WITH IMAGES ═══ -->
+<section id="stories" class="stories-section">
 
-    <!-- LUMINA -->
-    <div class="brand-story" style="background:var(--ivory);">
-        <div class="brand-story-inner container">
-            <div>
-                <p class="story-eyebrow accent-lumina">01 — Lumina Lighting</p>
-                <h2 class="story-heading">Where Light Becomes<br><em>an Experience</em></h2>
-                <p class="story-body">Presented by Betelihem Getaneh, Lumina was born from the belief that light is not merely functional — it is emotional. Each fixture is engineered to move with the day, softening the morning, anchoring the evening, and transforming every room into a mood.</p>
-                <div class="pricing-tiers">
-                    <div class="pricing-tier-row" style="border-color:var(--lumina);background:rgba(176,125,58,0.04);">
-                        <span class="tier-name accent-lumina">Aurora Accent Light</span>
-                        <span class="tier-desc">Launch Discount · 2,400 ETB</span>
-                    </div>
-                    <div class="pricing-tier-row" style="border-color:var(--lumina);background:rgba(176,125,58,0.04);">
-                        <span class="tier-name accent-lumina">Eclipse Chandelier</span>
-                        <span class="tier-desc">Early Adopter Offer · 14,500 ETB</span>
-                    </div>
-                </div>
-                <p style="font-size:.7rem;letter-spacing:.12em;color:var(--mid);margin-top:1.5rem;">betiqiyas@gmail.com · www.luminalighting.com</p>
-                <div class="story-products" style="margin-top:2rem;">
-                    <div class="story-product-item">
-                        <div class="story-product-num">01</div>
-                        <div>
-                            <div class="story-product-title">Ambient Table Lamp</div>
-                            <p class="story-product-desc">Hand-blown glass globes cast a soft, seamless glow. Designed for mindful living.</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">02</div>
-                        <div>
-                            <div class="story-product-title">Architectural Floor Lamp</div>
-                            <p class="story-product-desc">Slender brass structures meet focused, functional lighting for living spaces and reading corners.</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">03</div>
-                        <div>
-                            <div class="story-product-title">Sculptural Pendant</div>
-                            <p class="story-product-desc">Statement ceiling fixtures that illuminate dining areas and become the centrepiece of any interior.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="story-visual">
-                <div class="story-visual-box" style="background:linear-gradient(145deg,#1a1408,#2d1e00);">
-                    <div class="story-visual-bg"></div>
-                    <div class="story-visual-icon" style="color:var(--gold);opacity:.9;"><i class="fa-solid fa-lightbulb"></i></div>
-                    <span class="story-visual-label" style="color:var(--cream);">Lumina</span>
-                    <span class="story-visual-url" style="color:rgba(205,185,154,.6);">www.luminalighting.com</span>
-                </div>
-                <div class="price-badge">
-                    <span class="label">From</span>
-                    <span class="amount">2,400 ETB</span>
-                </div>
-            </div>
+  <!-- LUMINA -->
+  <div class="story-block">
+    <div class="story-inner">
+      <div class="story-content">
+        <span class="story-num">01</span>
+        <span class="story-brand c-lumina">Lumina Lighting · Presented by Betelihem Getaneh</span>
+        <h2 class="story-heading">Where Light Becomes<br><em>an Experience</em></h2>
+        <p class="story-body">Born from the belief that light is not merely functional — it is emotional. Each Lumina fixture is engineered to move with the day, softening the morning, anchoring the evening, and transforming every room into a mood. Available from betiqiyas@gmail.com · www.luminalighting.com</p>
+        <div class="story-specs">
+          <div class="spec-row c-lumina" style="border-color:var(--lumina);">
+            <span class="spec-name c-lumina">Aurora Accent</span>
+            <span class="spec-detail">Launch Discount — 2,400 ETB</span>
+          </div>
+          <div class="spec-row c-lumina" style="border-color:var(--lumina);">
+            <span class="spec-name c-lumina">Eclipse Chandelier</span>
+            <span class="spec-detail">Early Adopter Offer — 14,500 ETB</span>
+          </div>
         </div>
+        <a href="#catalog" class="btn-outline c-lumina" style="border-color:var(--lumina);color:var(--lumina);width:fit-content;" onclick="filterBrand('Lumina')">View Lumina →</a>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a35703dc2?auto=format&fit=crop&w=900&q=80" alt="Lumina Lighting">
+        <div class="story-overlay">
+          <div class="story-price-badge">
+            <span class="badge-label">Starting From</span>
+            <span class="badge-amount">2,400 ETB</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- PURESIP -->
-    <div class="brand-story" style="background:var(--cream);">
-        <div class="brand-story-inner container reverse">
-            <div>
-                <p class="story-eyebrow accent-puresip">02 — PureSip</p>
-                <h2 class="story-heading">A Refreshing<br><em>Natural Journey</em></h2>
-                <p class="story-body">100% organic fruits, no additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants. Discover PureSip through immersive content, subscribe for weekly doorstep delivery, and save more every order.</p>
-                <div class="pricing-tiers">
-                    <div class="pricing-tier-row" style="border-color:var(--puresip);background:rgba(92,122,90,0.04);">
-                        <span class="tier-name accent-puresip">Entry Level</span>
-                        <span class="tier-desc">Single-serve bottles at accessible daily pricing</span>
-                    </div>
-                    <div class="pricing-tier-row" style="border-color:var(--puresip);background:rgba(92,122,90,0.04);">
-                        <span class="tier-name accent-puresip">Premium Bundle</span>
-                        <span class="tier-desc">Cold-pressed multi-packs with exclusive discounts · 580 ETB</span>
-                    </div>
-                </div>
-                <div class="story-products" style="margin-top:2rem;">
-                    <div class="story-product-item">
-                        <div class="story-product-num">01</div>
-                        <div>
-                            <div class="story-product-title">Citrus Blast</div>
-                            <p class="story-product-desc">Packed with Vitamin C from 100% organic citrus. Zesty, energising, immunity-boosting.</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">02</div>
-                        <div>
-                            <div class="story-product-title">Green Detox</div>
-                            <p class="story-product-desc">Cold-pressed kale, spinach, and apple. Cleanses and revitalises with every sip.</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">03</div>
-                        <div>
-                            <div class="story-product-title">Berry Antioxidant</div>
-                            <p class="story-product-desc">Nutrient-dense dark berries. Supports immunity with authentic taste and zero additives.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="story-visual">
-                <div class="story-visual-box" style="background:linear-gradient(145deg,#f0faee,#d4e8d0);">
-                    <div class="story-visual-icon" style="color:var(--puresip);opacity:.85;"><i class="fa-solid fa-bottle-droplet"></i></div>
-                    <span class="story-visual-label" style="color:#2d4a2b;">PureSip</span>
-                    <span class="story-visual-url" style="color:#5c7a5a;">www.reallygreatsip.com</span>
-                </div>
-                <div class="price-badge">
-                    <span class="label">From</span>
-                    <span class="amount">185 ETB</span>
-                </div>
-            </div>
+  <!-- PURESIP -->
+  <div class="story-block">
+    <div class="story-inner flip">
+      <div class="story-content">
+        <span class="story-num">02</span>
+        <span class="story-brand c-puresip">PureSip · reallygreatsip.com</span>
+        <h2 class="story-heading">A Refreshing<br><em>Natural Journey</em></h2>
+        <p class="story-body">100% organic fruits, no additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants. Subscribe for weekly doorstep delivery and save more every order. Discover PureSip through immersive content at www.reallygreatsip.com</p>
+        <div class="story-specs">
+          <div class="spec-row" style="border-color:var(--puresip);">
+            <span class="spec-name c-puresip">Single Serve</span>
+            <span class="spec-detail">Accessible daily pricing from 185 ETB</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--puresip);">
+            <span class="spec-name c-puresip">Wellness Bundle</span>
+            <span class="spec-detail">Cold-pressed multi-pack — 580 ETB</span>
+          </div>
         </div>
+        <a href="#catalog" class="btn-outline" style="border-color:var(--puresip);color:var(--puresip);width:fit-content;" onclick="filterBrand('PureSip')">View PureSip →</a>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=900&q=80" alt="PureSip Wellness">
+        <div class="story-overlay">
+          <div class="story-price-badge">
+            <span class="badge-label">Starting From</span>
+            <span class="badge-amount">185 ETB</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- ARTISAN LEATHER -->
-    <div class="brand-story" style="background:var(--ivory);">
-        <div class="brand-story-inner container">
-            <div>
-                <p class="story-eyebrow accent-leather">03 — Artisan Leather</p>
-                <h2 class="story-heading">Crafted with<br><em>Purpose</em></h2>
-                <p class="story-body">Eco-safe tanning processes, 100% top-grain Ethiopian leather, and empowering local artisans. Uncompromising quality in every handcrafted detail — rich textures, impeccable stitching, and timeless elegance available through visual social media, influencer collaborations, and interactive catalogues.</p>
-                <div class="story-products" style="margin-top:2rem;">
-                    <div class="story-product-item">
-                        <div class="story-product-num">01</div>
-                        <div>
-                            <div class="story-product-title">Heritage Tote</div>
-                            <p class="story-product-desc">Spacious luxury bag for everyday use, crafted from top-grain Ethiopian leather. · 9,500 ETB</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">02</div>
-                        <div>
-                            <div class="story-product-title">Executive Wallet</div>
-                            <p class="story-product-desc">Slim RFID-protected wallet. Modern security with timeless style. · 2,200 ETB</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">03</div>
-                        <div>
-                            <div class="story-product-title">Travel Companion</div>
-                            <p class="story-product-desc">Passport organiser for the discerning traveller. Documents secure, accessible, luxurious. · 3,400 ETB</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="story-visual">
-                <div class="story-visual-box" style="background:linear-gradient(145deg,#3b1f0d,#6b3316);">
-                    <div class="story-visual-icon" style="color:#c9a070;opacity:.9;"><i class="fa-solid fa-bag-shopping"></i></div>
-                    <span class="story-visual-label" style="color:#f0e0cc;">Artisan<br>Leather</span>
-                    <span class="story-visual-url" style="color:rgba(200,165,120,.6);">www.artisanleather.com</span>
-                </div>
-                <div class="price-badge">
-                    <span class="label">From</span>
-                    <span class="amount">2,200 ETB</span>
-                </div>
-            </div>
+  <!-- ARTISAN LEATHER -->
+  <div class="story-block">
+    <div class="story-inner">
+      <div class="story-content">
+        <span class="story-num">03</span>
+        <span class="story-brand c-leather">Artisan Leather · artisanleather.com</span>
+        <h2 class="story-heading">Crafted with<br><em>Purpose & Soul</em></h2>
+        <p class="story-body">Eco-safe tanning processes, 100% top-grain Ethiopian leather, and a commitment to empowering local artisans. Uncompromising quality in every handcrafted detail — rich textures, impeccable stitching, and timeless elegance available through visual social media, influencer collaborations, and interactive catalogues.</p>
+        <div class="story-specs">
+          <div class="spec-row" style="border-color:var(--leather);">
+            <span class="spec-name c-leather">Heritage Tote</span>
+            <span class="spec-detail">Top-grain Ethiopian leather — 9,500 ETB</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--leather);">
+            <span class="spec-name c-leather">Executive Wallet</span>
+            <span class="spec-detail">RFID-protected, slim — 2,200 ETB</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--leather);">
+            <span class="spec-name c-leather">Travel Companion</span>
+            <span class="spec-detail">Passport organiser — 3,400 ETB</span>
+          </div>
         </div>
+        <a href="#catalog" class="btn-outline" style="border-color:var(--leather);color:var(--leather);width:fit-content;" onclick="filterBrand('Artisan Leather')">View Leather →</a>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=80" alt="Artisan Leather">
+        <div class="story-overlay">
+          <div class="story-price-badge">
+            <span class="badge-label">Starting From</span>
+            <span class="badge-amount">2,200 ETB</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- EARTH & OVEN -->
-    <div class="brand-story" style="background:var(--cream);">
-        <div class="brand-story-inner container reverse">
-            <div>
-                <p class="story-eyebrow accent-earthoven">04 — Earth & Oven</p>
-                <h2 class="story-heading">Gourmet,<br><em>Naturally.</em></h2>
-                <p class="story-body">Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet grains crafted with organic ingredients for the modern, health-conscious kitchen. Available in urban grocery stores, our e-commerce platform, and meal kit collaborations nationwide.</p>
-                <div class="pricing-tiers">
-                    <div class="pricing-tier-row" style="border-color:var(--earthoven);background:rgba(122,59,30,0.04);">
-                        <span class="tier-name accent-earthoven">Entry Level</span>
-                        <span class="tier-desc">Attractively priced for first-time trials</span>
-                    </div>
-                    <div class="pricing-tier-row" style="border-color:var(--earthoven);background:rgba(122,59,30,0.04);">
-                        <span class="tier-name accent-earthoven">Volume Discount</span>
-                        <span class="tier-desc">Incentives for larger purchases</span>
-                    </div>
-                    <div class="pricing-tier-row" style="border-color:var(--earthoven);background:rgba(122,59,30,0.04);">
-                        <span class="tier-name accent-earthoven">Premium Tier</span>
-                        <span class="tier-desc">Limited-run specialty flavours at higher margins</span>
-                    </div>
-                </div>
-                <div class="story-products" style="margin-top:2rem;">
-                    <div class="story-product-item">
-                        <div class="story-product-num">01</div>
-                        <div>
-                            <div class="story-product-title">Artisanal Sauces</div>
-                            <p class="story-product-desc">Slowly simmered with organic herbs. Rich, complex flavours for every kitchen. · 450 ETB</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">02</div>
-                        <div>
-                            <div class="story-product-title">Premium Fruit Preserves</div>
-                            <p class="story-product-desc">Natural fruit chunks with vibrant flavours — perfect for breakfast or dessert. · 380 ETB</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">03</div>
-                        <div>
-                            <div class="story-product-title">Gourmet Ready-to-Eat Grains</div>
-                            <p class="story-product-desc">Steam-sealed, perfectly seasoned. Nutritious meals for busy lifestyles. · 520 ETB</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="story-visual">
-                <div class="story-visual-box" style="background:linear-gradient(145deg,#4a1f08,#8b3d1a);">
-                    <div class="story-visual-icon" style="color:#d4882a;opacity:.9;"><i class="fa-solid fa-jar"></i></div>
-                    <span class="story-visual-label" style="color:#f5e0cc;">Earth &<br>Oven</span>
-                    <span class="story-visual-url" style="color:rgba(210,160,90,.6);">Gourmet, Naturally.</span>
-                </div>
-                <div class="price-badge">
-                    <span class="label">From</span>
-                    <span class="amount">380 ETB</span>
-                </div>
-            </div>
+  <!-- EARTH & OVEN -->
+  <div class="story-block">
+    <div class="story-inner flip">
+      <div class="story-content">
+        <span class="story-num">04</span>
+        <span class="story-brand c-earthoven">Earth & Oven · Gourmet, Naturally.</span>
+        <h2 class="story-heading">Gourmet,<br><em>Naturally.</em></h2>
+        <p class="story-body">Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet ready-to-eat grains crafted with organic ingredients for the modern, health-conscious kitchen. Available in urban grocery stores, our e-commerce platform, and nationwide meal kit collaborations.</p>
+        <div class="story-specs">
+          <div class="spec-row" style="border-color:var(--earthoven);">
+            <span class="spec-name c-earthoven">Entry Access</span>
+            <span class="spec-detail">First-trial pricing from 380 ETB</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--earthoven);">
+            <span class="spec-name c-earthoven">Volume Discount</span>
+            <span class="spec-detail">Incentives for larger purchases</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--earthoven);">
+            <span class="spec-name c-earthoven">Premium Tier</span>
+            <span class="spec-detail">Limited-run specialty flavours — 520 ETB</span>
+          </div>
         </div>
+        <a href="#catalog" class="btn-outline" style="border-color:var(--earthoven);color:var(--earthoven);width:fit-content;" onclick="filterBrand('Earth & Oven')">View Gourmet →</a>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=900&q=80" alt="Earth and Oven">
+        <div class="story-overlay">
+          <div class="story-price-badge">
+            <span class="badge-label">Starting From</span>
+            <span class="badge-amount">380 ETB</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- ELARA HAIR -->
-    <div class="brand-story" style="background:var(--ivory);">
-        <div class="brand-story-inner container">
-            <div>
-                <p class="story-eyebrow accent-elara">05 — Elara Hair</p>
-                <h2 class="story-heading">Ethiopian Botanicals<br><em>for Your Hair</em></h2>
-                <p class="story-body">Elara Hair draws on Ethiopia's extraordinary botanical heritage — black castor, moringa, nigella sativa, wild honey — transforming ancient remedies into a contemporary hair care ritual. Every product is sulphate-free, paraben-free, and never tested on animals.</p>
-                <div class="pricing-tiers">
-                    <div class="pricing-tier-row" style="border-color:var(--elara);background:rgba(123,94,167,0.04);">
-                        <span class="tier-name accent-elara">Daily Care</span>
-                        <span class="tier-desc">Black Castor Shampoo · 320 ETB</span>
-                    </div>
-                    <div class="pricing-tier-row" style="border-color:var(--elara);background:rgba(123,94,167,0.04);">
-                        <span class="tier-name accent-elara">Scalp Treatment</span>
-                        <span class="tier-desc">Moringa Scalp Oil · 490 ETB</span>
-                    </div>
-                    <div class="pricing-tier-row" style="border-color:var(--elara);background:rgba(123,94,167,0.04);">
-                        <span class="tier-name accent-elara">Deep Repair</span>
-                        <span class="tier-desc">Restorative Hair Mask · 560 ETB</span>
-                    </div>
-                </div>
-                <div class="story-products" style="margin-top:2rem;">
-                    <div class="story-product-item">
-                        <div class="story-product-num">01</div>
-                        <div>
-                            <div class="story-product-title">Black Castor Shampoo</div>
-                            <p class="story-product-desc">Sulphate-free cleanser with black castor oil and rosemary. Strengthens, reduces breakage, restores lustre.</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">02</div>
-                        <div>
-                            <div class="story-product-title">Moringa Scalp Oil</div>
-                            <p class="story-product-desc">Cold-pressed moringa and nigella sativa. Nourishes at the root, stimulates growth, imparts healthy sheen.</p>
-                        </div>
-                    </div>
-                    <div class="story-product-item">
-                        <div class="story-product-num">03</div>
-                        <div>
-                            <div class="story-product-title">Restorative Hair Mask</div>
-                            <p class="story-product-desc">Shea butter, aloe vera, and Ethiopian honey. Deep repair for softer, more elastic hair after one use.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="story-visual">
-                <div class="story-visual-box" style="background:linear-gradient(145deg,#1f0f2e,#3d2060);">
-                    <div class="story-visual-icon" style="color:#b090d8;opacity:.9;"><i class="fa-solid fa-spa"></i></div>
-                    <span class="story-visual-label" style="color:#ede0ff;">Elara<br>Hair</span>
-                    <span class="story-visual-url" style="color:rgba(180,150,220,.55);">www.elarahair.com</span>
-                </div>
-                <div class="price-badge">
-                    <span class="label">From</span>
-                    <span class="amount">320 ETB</span>
-                </div>
-            </div>
+  <!-- ELARA HAIR -->
+  <div class="story-block">
+    <div class="story-inner">
+      <div class="story-content">
+        <span class="story-num">05</span>
+        <span class="story-brand c-elara">Elara Hair · elarahair.com</span>
+        <h2 class="story-heading">Ethiopian Botanicals<br><em>for Your Hair</em></h2>
+        <p class="story-body">Elara Hair draws on Ethiopia's extraordinary botanical heritage — black castor, moringa, nigella sativa, wild honey — transforming ancient remedies into a contemporary hair care ritual. Every product is sulphate-free, paraben-free, and never tested on animals. Available at www.elarahair.com</p>
+        <div class="story-specs">
+          <div class="spec-row" style="border-color:var(--elara);">
+            <span class="spec-name c-elara">Daily Care</span>
+            <span class="spec-detail">Black Castor Shampoo — 320 ETB</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--elara);">
+            <span class="spec-name c-elara">Scalp Treatment</span>
+            <span class="spec-detail">Moringa Scalp Oil — 490 ETB</span>
+          </div>
+          <div class="spec-row" style="border-color:var(--elara);">
+            <span class="spec-name c-elara">Deep Repair</span>
+            <span class="spec-detail">Restorative Hair Mask — 560 ETB</span>
+          </div>
         </div>
+        <a href="#catalog" class="btn-outline" style="border-color:var(--elara);color:var(--elara);width:fit-content;" onclick="filterBrand('Elara Hair')">View Elara →</a>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80" alt="Elara Hair">
+        <div class="story-overlay">
+          <div class="story-price-badge">
+            <span class="badge-label">Starting From</span>
+            <span class="badge-amount">320 ETB</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
 </section>
 
-<!-- ═══════════════ ABOUT ═══════════════ -->
+<!-- ═══ ABOUT ═══ -->
 <section class="about-section">
-    <div class="container">
-        <div class="divider"></div>
-        <h2 data-lang="ab-title">About Our Premium Hub</h2>
-        <p data-lang="ab-desc">This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.</p>
-        <div class="about-pillars">
-            <div class="about-pillar">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span data-lang="ab-p1">100% Ethically Sourced</span>
-            </div>
-            <div class="about-pillar">
-                <i class="fa-solid fa-leaf"></i>
-                <span data-lang="ab-p2">Eco Conscious</span>
-            </div>
-            <div class="about-pillar">
-                <i class="fa-solid fa-hands-holding"></i>
-                <span data-lang="ab-p3">Artisan Empowered</span>
-            </div>
-            <div class="about-pillar">
-                <i class="fa-solid fa-truck-ramp-box"></i>
-                <span data-lang="ab-p4">Nationwide Distribution</span>
-            </div>
-            <div class="about-pillar">
-                <i class="fa-solid fa-award"></i>
-                <span data-lang="ab-p5">Premium Certified</span>
-            </div>
-        </div>
+  <div class="container">
+    <span class="eyebrow">Our Philosophy</span>
+    <div class="gold-rule" style="max-width:400px;margin:0 auto 2rem;"><span data-lang="ab-rule">About</span></div>
+    <h2 data-lang="ab-title">About Our Premium Hub</h2>
+    <p data-lang="ab-desc">This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-ico"><i class="fa-solid fa-shield-halved"></i></div>
+        <span data-lang="ab-p1">Ethically Sourced</span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ico"><i class="fa-solid fa-leaf"></i></div>
+        <span data-lang="ab-p2">Eco Conscious</span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ico"><i class="fa-solid fa-hands-holding"></i></div>
+        <span data-lang="ab-p3">Artisan Empowered</span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ico"><i class="fa-solid fa-truck-ramp-box"></i></div>
+        <span data-lang="ab-p4">Nationwide Distribution</span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ico"><i class="fa-solid fa-award"></i></div>
+        <span data-lang="ab-p5">Premium Certified</span>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ═══════════════ CONTACT ═══════════════ -->
-<section id="contact" class="section" style="background:var(--warm);">
-    <div class="container">
-        <div class="section-header">
-            <h2 data-lang="contact-title">Let's Connect</h2>
-            <div class="divider"></div>
-            <p data-lang="contact-sub">Reach our master inquiry office</p>
-        </div>
-        <div class="contact-grid">
-            <div>
-                <h3 style="font-size:1.4rem;font-weight:400;font-style:italic;margin-bottom:1.5rem;">Lumina Lighting</h3>
-                <div class="contact-info-row"><i class="fa-solid fa-phone"></i> +251716501961</div>
-                <div class="contact-info-row"><i class="fa-solid fa-envelope"></i> betiqiyas@gmail.com</div>
-                <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.luminalighting.com</div>
-                <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.reallygreatsip.com</div>
-                <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.artisanleather.com</div>
-                <div class="contact-info-row"><i class="fa-solid fa-globe"></i> www.elarahair.com</div>
-                <div style="margin-top:2rem;">
-                    <p style="font-size:.75rem;color:var(--mid);line-height:1.8;">Shop via Social Commerce — discover our brands through immersive video content. Partner influencers and designers bring each piece to life.</p>
-                </div>
-            </div>
-            <div class="contact-form">
-                <div class="form-field">
-                    <label data-lang="contact-name">Full Name</label>
-                    <input type="text" placeholder="Your name">
-                </div>
-                <div class="form-field">
-                    <label data-lang="contact-email">Email Address</label>
-                    <input type="email" placeholder="your@email.com">
-                </div>
-                <div class="form-field">
-                    <label data-lang="contact-msg">Message</label>
-                    <textarea placeholder="Tell us about your inquiry…"></textarea>
-                </div>
-                <button class="btn-pill filled" onclick="alert('Inquiry sent successfully!')" data-lang="contact-send">Send Message</button>
-            </div>
-        </div>
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Reach Us</span>
+      <div class="gold-rule" style="max-width:300px;margin:0 auto 2rem;"><span data-lang="contact-rule">Contact</span></div>
+      <h2 data-lang="contact-title">Let's Connect</h2>
+      <p data-lang="contact-sub">Reach our master inquiry office</p>
     </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Lumina Lighting</h3>
+        <div class="info-row"><i class="fa-solid fa-phone"></i> +251 716 501 961</div>
+        <div class="info-row"><i class="fa-solid fa-envelope"></i> betiqiyas@gmail.com</div>
+        <div class="info-row"><i class="fa-solid fa-globe"></i> www.luminalighting.com</div>
+        <div class="info-row"><i class="fa-solid fa-globe"></i> www.reallygreatsip.com</div>
+        <div class="info-row"><i class="fa-solid fa-globe"></i> www.artisanleather.com</div>
+        <div class="info-row"><i class="fa-solid fa-globe"></i> www.elarahair.com</div>
+        <p style="margin-top:2rem;font-size:.75rem;color:var(--ash);line-height:1.9;">Shop via Social Commerce — discover our brands through immersive video content. Partner influencers and designers bring each piece to life.</p>
+      </div>
+      <div class="contact-form">
+        <div class="form-field">
+          <label data-lang="contact-name">Full Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label data-lang="contact-email">Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label data-lang="contact-msg">Message</label>
+          <textarea placeholder="Tell us about your inquiry…"></textarea>
+        </div>
+        <button class="btn-solid" onclick="alert('Inquiry sent!')" data-lang="contact-send">Send Message</button>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
-    <p class="footer-brands" data-lang="footer-brands">Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</p>
-    <p data-lang="footer-copy">© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination</p>
+  <p class="footer-brands" data-lang="footer-brands">Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair</p>
+  <p data-lang="footer-copy">© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination</p>
 </footer>
 
-<!-- ═══════════════ CART DRAWER ═══════════════ -->
+<!-- ═══ CART DRAWER ═══ -->
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cartDrawer">
-    <div class="cart-header">
-        <h3 data-lang="cart-title">Your Order</h3>
-        <button class="btn-icon" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
+  <div class="cart-head">
+    <h3 data-lang="cart-title">Your Order</h3>
+    <button class="btn-ico" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty-msg" id="cartEmpty" data-lang="cart-empty">Your basket is empty.</div>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-total-row">
+      <span class="ct-label" data-lang="cart-total">Total</span>
+      <span class="ct-amount" id="cartTotal">0 ETB</span>
     </div>
-    <div class="cart-body" id="cartBody">
-        <div class="cart-empty" id="cartEmpty" data-lang="cart-empty">Your basket is empty.</div>
-    </div>
-    <div class="cart-footer">
-        <div class="cart-total-row">
-            <span class="cart-total-label" data-lang="cart-total">Total</span>
-            <span class="cart-total-amount" id="cartTotal">0 ETB</span>
-        </div>
-        <button class="btn-pill filled" style="width:100%;padding:14px;" onclick="alert('Order confirmed for dispatch!')" data-lang="cart-checkout">Confirm Order</button>
-    </div>
+    <button class="btn-solid" style="width:100%;padding:16px;" onclick="alert('Order confirmed for dispatch!')" data-lang="cart-checkout">Confirm Order</button>
+  </div>
 </div>
 
 <script>
-    /* ── CART ── */
-    let cart = [];
+/* ── CART ── */
+let cart = [];
+function addToCart(name, price) {
+  cart.push({ name, price });
+  renderCart();
+  openCart();
+}
+function removeFromCart(i) { cart.splice(i, 1); renderCart(); }
+function renderCart() {
+  const badge = document.getElementById('cartBadge');
+  const body  = document.getElementById('cartBody');
+  const empty = document.getElementById('cartEmpty');
+  const total = document.getElementById('cartTotal');
+  badge.textContent = cart.length;
+  badge.style.display = cart.length ? 'flex' : 'none';
+  empty.style.display = cart.length ? 'none' : 'block';
+  body.querySelectorAll('.cart-item').forEach(n => n.remove());
+  let sum = 0;
+  cart.forEach((item, i) => {
+    sum += item.price;
+    const el = document.createElement('div');
+    el.className = 'cart-item';
+    el.innerHTML = `
+      <div>
+        <div class="ci-name">${item.name}</div>
+        <div class="ci-price">${item.price.toLocaleString()} ETB</div>
+      </div>
+      <i class="fa-solid fa-trash-can ci-remove" onclick="removeFromCart(${i})"></i>`;
+    body.appendChild(el);
+  });
+  total.textContent = sum.toLocaleString() + ' ETB';
+}
+function openCart()  { document.getElementById('cartOverlay').classList.add('open'); document.getElementById('cartDrawer').classList.add('open'); }
+function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); document.getElementById('cartDrawer').classList.remove('open'); }
+document.getElementById('cartBtn').addEventListener('click', openCart);
 
-    function addToCart(name, price) {
-        cart.push({ name, price });
-        renderCart();
-    }
+/* ── FILTER ── */
+function filterBrand(brand, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.display = (brand === 'All' || card.dataset.brand === brand) ? 'flex' : 'none';
+  });
+  if (btn || brand !== 'All') {
+    setTimeout(() => document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' }), 50);
+  }
+}
 
-    function removeFromCart(i) {
-        cart.splice(i, 1);
-        renderCart();
-    }
+/* ── THEME ── */
+const themeBtn = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+let isDark = true;
+themeBtn.addEventListener('click', () => {
+  isDark = !isDark;
+  if (!isDark) {
+    document.documentElement.style.setProperty('--obsidian','#F2EDE5');
+    document.documentElement.style.setProperty('--carbon','#FDFAF5');
+    document.documentElement.style.setProperty('--ink','#EDE8DF');
+    document.documentElement.style.setProperty('--mink','#E0D8CC');
+    document.documentElement.style.setProperty('--parchment','#1E1B17');
+    document.documentElement.style.setProperty('--fog','#4A4440');
+    document.documentElement.style.setProperty('--ash','#6A6060');
+    themeIcon.className = 'fa-regular fa-sun';
+  } else {
+    document.documentElement.style.setProperty('--obsidian','#0D0C0A');
+    document.documentElement.style.setProperty('--carbon','#161410');
+    document.documentElement.style.setProperty('--ink','#1E1B17');
+    document.documentElement.style.setProperty('--mink','#2A2520');
+    document.documentElement.style.setProperty('--parchment','#F2EDE5');
+    document.documentElement.style.setProperty('--fog','#C8BFB0');
+    document.documentElement.style.setProperty('--ash','#8A8070');
+    themeIcon.className = 'fa-regular fa-moon';
+  }
+});
 
-    function renderCart() {
-        const badge = document.getElementById('cartBadge');
-        const body  = document.getElementById('cartBody');
-        const empty = document.getElementById('cartEmpty');
-        const total = document.getElementById('cartTotal');
+/* ── LANGUAGE ── */
+const T = {
+  en: {
+    "logo-sub":"Five Exceptional Brands, One Destination",
+    "nav-home":"Home","nav-brands":"Brands","nav-catalog":"Catalog","nav-collection":"Collection","nav-contact":"Contact",
+    "auth-login":"Login",
+    "cart-title":"Your Order","cart-empty":"Your basket is empty.","cart-total":"Total","cart-checkout":"Confirm Order",
+    "hero-eyebrow":"Curated · Authentic · Ethiopian",
+    "hero-h1":"Five Exceptional<br>Brands,&nbsp;<em>One</em>","hero-sub":"Destination.",
+    "hero-desc":"Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.",
+    "hero-cta1":"Explore Catalog","hero-cta2":"Meet the Brands","hero-scroll":"Scroll",
+    "chip-lumina":"Lumina","chip-puresip":"PureSip","chip-leather":"Artisan Leather","chip-earthoven":"Earth & Oven","chip-elara":"Elara Hair",
+    "brands-rule":"Our Brands","brands-title":"Five Brands, One Philosophy","brands-sub":"Curated excellence across five distinct Ethiopian lifestyle categories",
+    "b01-name":"Lumina","b01-tag":"Luxury Lighting","b01-desc":"Where light becomes an immersive experience. Architectural fixtures engineered to shape mood, softening the morning and anchoring the evening.","b01-link":"View Collection →",
+    "b02-name":"PureSip","b02-tag":"Cold-Pressed Wellness","b02-desc":"100% organic fruits, zero additives, zero added sugar. Pure, nutrient-rich goodness packed with essential vitamins and antioxidants.","b02-link":"View Elixirs →",
+    "b03-name":"Artisan Leather","b03-tag":"Luxury Goods","b03-desc":"100% top-grain Ethiopian leather. Rich textures, impeccable stitching, and timeless elegance crafted entirely by local artisans.","b03-link":"View Goods →",
+    "b04-name":"Earth & Oven","b04-tag":"Gourmet Foods","b04-desc":"Redefining premium processed foods. Artisanal sauces, preserves, and gourmet grains crafted with organic ingredients for the health-conscious kitchen.","b04-link":"View Gourmet →",
+    "b05-name":"Elara Hair","b05-tag":"Natural Hair Care","b05-desc":"Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments for your natural texture.","b05-link":"View Hair Care →",
+    "cat-rule":"Products","cat-title":"The Premium Catalog","cat-sub":"One signature product per brand — each a pinnacle of its craft",
+    "tab-all":"All","tab-lumina":"Lumina","tab-puresip":"PureSip","tab-leather":"Artisan Leather","tab-earthoven":"Earth & Oven","tab-elara":"Elara Hair",
+    "ab-rule":"About","ab-title":"About Our Premium Hub",
+    "ab-desc":"This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.",
+    "ab-p1":"Ethically Sourced","ab-p2":"Eco Conscious","ab-p3":"Artisan Empowered","ab-p4":"Nationwide Distribution","ab-p5":"Premium Certified",
+    "contact-rule":"Contact","contact-title":"Let's Connect","contact-sub":"Reach our master inquiry office",
+    "contact-name":"Full Name","contact-email":"Email Address","contact-msg":"Message","contact-send":"Send Message",
+    "footer-brands":"Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair",
+    "footer-copy":"© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination"
+  },
+  am: {
+    "logo-sub":"አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ",
+    "nav-home":"መነሻ","nav-brands":"ብራንዶች","nav-catalog":"ካታሎግ","nav-collection":"ስብስብ","nav-contact":"ግንኙነት",
+    "auth-login":"ግባ",
+    "cart-title":"ትዕዛዝህ","cart-empty":"ቅርጫትህ ባዶ ነው።","cart-total":"ጠቅላላ","cart-checkout":"ትዕዛዝ አረጋግጥ",
+    "hero-eyebrow":"የተመረጠ · እውነተኛ · ኢትዮጵያዊ",
+    "hero-h1":"አምስት ልዩ ብራንዶች፣<br><em>አንድ</em>","hero-sub":"መድረሻ።",
+    "hero-desc":"በፕሪሚየም መብራት፣ ቀዝቃዛ የጤና መጠጦች፣ ከፍተኛ ኢትዮጵያ ቆዳ ስራዎች፣ ጥራት ምግቦች እና ተፈጥሮ ፀጉር እንክብካቤ ላቀ እጅ ስራን ይለማመዱ።",
+    "hero-cta1":"ካታሎግ ያስሱ","hero-cta2":"ብራንዶቹን ይገናኙ","hero-scroll":"ወደ ታች",
+    "chip-lumina":"ሉሚና","chip-puresip":"ፒውርሲፕ","chip-leather":"አርቲዛን ሌዘር","chip-earthoven":"ኤርት ኤንድ ኦቨን","chip-elara":"ኤላራ ፀጉር",
+    "brands-rule":"ብራንዶቻችን","brands-title":"አምስት ብራንዶች ፣ አንድ ፍልስፍና","brands-sub":"በአምስት ልዩ የኢትዮጵያ የአኗኗር ዘርፎች የተሰበሰቡ",
+    "b01-name":"ሉሚና","b01-tag":"የቅንጦት መብራት","b01-desc":"ብርሃን ልምድ የሚሆንበት። ለዘመናዊ ውስጣዊ ክፍሎች የተሰሩ የስነ-ህንፃ መብራቶች።","b01-link":"ስብስብ ይመልከቱ →",
+    "b02-name":"ፒውርሲፕ","b02-tag":"ቀዝቃዛ ጭማቂ","b02-desc":"100% ኦርጋኒክ ፍራፍሬዎች። ምንም ተጨማሪ ነገር ወይም ስኳር የለም።","b02-link":"ጭማቂዎችን ይመልከቱ →",
+    "b03-name":"አርቲዛን ሌዘር","b03-tag":"የቅንጦት እቃዎች","b03-desc":"100% ከፍተኛ የኢትዮጵያ ቆዳ። የማይደራደር ጥራት በእያንዳንዱ የእጅ ስራ ዝርዝር።","b03-link":"እቃዎችን ይመልከቱ →",
+    "b04-name":"ኤርት ኤንድ ኦቨን","b04-tag":"ጎርሜ ምግቦች","b04-desc":"ፕሪሚየም የተቀነባበሩ ምግቦችን እንደገና መግለጽ። ለጤና-ንቃተ-ህሊና ኩሽና።","b04-link":"ጎርሜ ይመልከቱ →",
+    "b05-name":"ኤላራ ፀጉር","b05-tag":"ተፈጥሯዊ ፀጉር እንክብካቤ","b05-desc":"የኢትዮጵያ እፅዋት ወደ ዘመናዊ ሥነ-ስርዓት። ሻምፑ፣ ዘይቶች፣ እና ማስተካከያ።","b05-link":"ፀጉር ይመልከቱ →",
+    "cat-rule":"ምርቶች","cat-title":"ፕሪሚየም ካታሎግ","cat-sub":"በእያንዳንዱ ብራንድ አንድ ምርት — የእያንዳንዱ ጥምቀት",
+    "tab-all":"ሁሉም","tab-lumina":"ሉሚና","tab-puresip":"ፒውርሲፕ","tab-leather":"አርቲዛን ሌዘር","tab-earthoven":"ኤርት ኤንድ ኦቨን","tab-elara":"ኤላራ ፀጉር",
+    "ab-rule":"ስለ እኛ","ab-title":"ስለ ፕሪሚየም ሀብታችን",
+    "ab-desc":"ይህ የትብብር መዋቅር ከፍተኛ ጥራት ያላቸውን ምርቶች ወደ ከተማ ቦታዎች ያደርሳል። ዘመናዊ ምርትን ከትናንሽ የእጅ ሥራ አውደ ትምህርቶች ጋር በማጣመር።",
+    "ab-p1":"ስነ-ምግባር ተሰብስቧል","ab-p2":"ለአካባቢ ተስማሚ","ab-p3":"የእጅ ባለሙያ ዕድገት","ab-p4":"ሀገር አቀፍ ስርጭት","ab-p5":"ፕሪሚየም የተረጋገጠ",
+    "contact-rule":"ግንኙነት","contact-title":"ያነጋግሩን","contact-sub":"ዋና መጠይቅ ቢሮአችንን ያግኙ",
+    "contact-name":"ሙሉ ስም","contact-email":"ኢሜይል አድራሻ","contact-msg":"መልእክት","contact-send":"መልእክት ላክ",
+    "footer-brands":"ሉሚና · ፒውርሲፕ · አርቲዛን ሌዘር · ኤርት ኤንድ ኦቨን · ኤላራ ፀጉር",
+    "footer-copy":"© 2026 ፕሪሚየም ብራንዶች ስብስብ · ኢትዮጵያ · አምስት ልዩ ብራንዶች፣ አንድ መድረሻ"
+  }
+};
+let lang = localStorage.getItem('pb_lang') || 'en';
 
-        badge.textContent = cart.length;
-        badge.style.display = cart.length ? 'flex' : 'none';
-        empty.style.display = cart.length ? 'none' : 'block';
+function applyLang(l) {
+  lang = l;
+  localStorage.setItem('pb_lang', l);
+  document.getElementById('langBtn').textContent = l === 'en' ? 'AM' : 'EN';
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    const k = el.getAttribute('data-lang');
+    if (T[l] && T[l][k] !== undefined) el.innerHTML = T[l][k];
+  });
+}
+document.getElementById('langBtn').addEventListener('click', () => applyLang(lang === 'en' ? 'am' : 'en'));
+applyLang(lang);
 
-        // clear existing items
-        body.querySelectorAll('.cart-item').forEach(n => n.remove());
+/* ── AUTH ── */
+function updateAuth() {
+  const u = localStorage.getItem('pb_user');
+  document.getElementById('authLabel').innerHTML = u ? `Hi, ${u}` : (lang === 'en' ? 'Login' : 'ግባ');
+}
+document.getElementById('authBtn').addEventListener('click', () => {
+  const u = localStorage.getItem('pb_user');
+  if (u) { if (confirm('Logout ' + u + '?')) { localStorage.removeItem('pb_user'); updateAuth(); } }
+  else { const n = prompt('Enter your name:'); if (n?.trim()) { localStorage.setItem('pb_user', n.trim()); updateAuth(); } }
+});
+updateAuth();
 
-        let sum = 0;
-        cart.forEach((item, i) => {
-            sum += item.price;
-            const el = document.createElement('div');
-            el.className = 'cart-item';
-            el.innerHTML = `
-                <div>
-                    <div class="cart-item-name">${item.name}</div>
-                    <div class="cart-item-price">${item.price.toLocaleString()} ETB</div>
-                </div>
-                <i class="fa-solid fa-trash-can cart-remove" onclick="removeFromCart(${i})"></i>
-            `;
-            body.appendChild(el);
-        });
+/* ── MOBILE NAV ── */
+const mobileNav = document.getElementById('mobileNav');
+const hamburger = document.getElementById('hamburger');
+let mobileOpen = false;
+hamburger.addEventListener('click', () => {
+  mobileOpen = !mobileOpen;
+  mobileNav.style.display = mobileOpen ? 'block' : 'none';
+});
+function closeMobile() { mobileOpen = false; mobileNav.style.display = 'none'; }
 
-        total.textContent = sum.toLocaleString() + ' ETB';
-    }
+function checkMobile() {
+  if (window.innerWidth <= 860) { hamburger.style.display = 'flex'; }
+  else { hamburger.style.display = 'none'; mobileNav.style.display = 'none'; mobileOpen = false; }
+}
+window.addEventListener('resize', checkMobile);
+checkMobile();
 
-    function openCart()  { document.getElementById('cartOverlay').classList.add('open'); document.getElementById('cartDrawer').classList.add('open'); }
-    function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); document.getElementById('cartDrawer').classList.remove('open'); }
-
-    document.getElementById('cartBtn').addEventListener('click', openCart);
-
-    /* ── FILTER ── */
-    function filterBrand(brand, btn) {
-        // tab styling
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        if (btn) btn.classList.add('active');
-
-        document.querySelectorAll('.product-card').forEach(card => {
-            const show = brand === 'All' || card.dataset.brand === brand;
-            card.style.display = show ? 'flex' : 'none';
-        });
-
-        // scroll to catalog
-        document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    /* ── THEME ── */
-    document.getElementById('themeBtn').addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        document.getElementById('themeIcon').className =
-            document.body.classList.contains('dark') ? 'fa-regular fa-sun' : 'fa-regular fa-moon';
-    });
-
-    /* ── LANGUAGE ── */
-    const translations = {
-        en: {
-            "logo-sub": "Five Exceptional Brands, One Destination",
-            "nav-home": "Home", "nav-brands": "Brands", "nav-catalog": "Catalog", "nav-collection": "Collection",
-            "nav-about": "About", "nav-contact": "Contact", "nav-blog": "Blog",
-            "auth-login": "Login", "lang-btn": "AM",
-            "cart-title": "Your Order", "cart-empty": "Your basket is empty.", "cart-total": "Total", "cart-checkout": "Confirm Order",
-            "hero-eyebrow": "Curated · Authentic · Ethiopian",
-            "hero-title": "Four Exceptional Brands,<br><em>One Destination</em>",
-            "hero-desc": "Experience meticulous craftsmanship across premium lighting, cold-pressed wellness drinks, top-grain Ethiopian leather, artisanal gourmet foods, and natural hair care.",
-            "hero-cta-1": "Explore Catalog", "hero-cta-2": "Meet the Brands",
-            "chip-lumina": "Lumina", "chip-puresip": "PureSip", "chip-leather": "Artisan Leather", "chip-earthoven": "Earth & Oven", "chip-elara": "Elara Hair",
-            "brands-title": "Our Brand Portfolio", "brands-sub": "Five brands · One shared philosophy of quality",
-            "b01-num": "01 / 05", "b01-name": "Lumina", "b01-tag": "Lighting · Presented by Betelihem Getaneh",
-            "b01-desc": "Shaping moods through mindful design and sustainability — where light becomes an immersive experience. Architectural fixtures crafted for the modern interior.",
-            "b01-link": "View Collection →",
-            "b02-num": "02 / 05", "b02-name": "PureSip", "b02-tag": "Cold-Pressed Juices · reallygreatsip.com",
-            "b02-desc": "A refreshing natural journey. 100% organic fruits, zero additives, no sugar added — just pure, nutrient-rich goodness packed with essential vitamins and antioxidants.",
-            "b02-link": "View Elixirs →",
-            "b03-num": "03 / 05", "b03-name": "Artisan Leather", "b03-tag": "Luxury Goods · artisanleather.com",
-            "b03-desc": "Uncompromising quality in every handcrafted detail. 100% top-grain Ethiopian leather — rich textures, impeccable stitching, and timeless elegance by local artisans.",
-            "b03-link": "View Goods →",
-            "b04-num": "04 / 05", "b04-name": "Earth & Oven", "b04-tag": "Gourmet Foods · Gourmet, Naturally.",
-            "b04-desc": "Redefining premium processed foods. Artisanal sauces, fruit preserves, and gourmet ready-to-eat grains — crafted with organic ingredients for the health-conscious kitchen.",
-            "b04-link": "View Gourmet →",
-            "b05-num": "05 / 05", "b05-name": "Elara Hair", "b05-tag": "Natural Hair Care · elarahair.com",
-            "b05-desc": "Ethiopian botanicals transformed into luxurious hair rituals. Cold-pressed oils, herbal shampoos, and restorative treatments that honour your natural texture without compromise.",
-            "b05-link": "View Hair Care →",
-            "cat-title": "The Premium Catalog", "cat-sub": "All products across every brand",
-            "tab-all": "All Products", "tab-lumina": "Lumina", "tab-puresip": "PureSip", "tab-leather": "Artisan Leather", "tab-earthoven": "Earth & Oven", "tab-elara": "Elara Hair",
-            "ab-title": "About Our Premium Hub",
-            "ab-desc": "This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.",
-            "ab-p1": "100% Ethically Sourced", "ab-p2": "Eco Conscious", "ab-p3": "Artisan Empowered", "ab-p4": "Nationwide Distribution", "ab-p5": "Premium Certified",
-            "contact-title": "Let's Connect", "contact-sub": "Reach our master inquiry office",
-            "contact-name": "Full Name", "contact-email": "Email Address", "contact-msg": "Message",
-            "contact-send": "Send Message",
-            "footer-brands": "Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair",
-            "footer-copy": "© 2026 Premium Brands Collection · Ethiopia · Five Exceptional Brands, One Destination"
-        },
-        am: {
-            "logo-sub": "አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ",
-            "nav-home": "መነሻ", "nav-brands": "ብራንዶች", "nav-catalog": "ካታሎግ", "nav-collection": "ስብስብ",
-            "nav-about": "ስለ እኛ", "nav-contact": "ግንኙነት", "nav-blog": "ብሎግ",
-            "auth-login": "ግባ", "lang-btn": "EN",
-            "cart-title": "ትዕዛዝህ", "cart-empty": "ቅርጫትህ ባዶ ነው።", "cart-total": "ጠቅላላ", "cart-checkout": "ትእዛዝ አረጋግጥ",
-            "hero-eyebrow": "የተመረጠ · እውነተኛ · ኢትዮጵያዊ",
-            "hero-title": "አራት ልዩ ብራንዶች፣<br><em>አንድ መድረሻ</em>",
-            "hero-desc": "በፕሪሚየም መብራት፣ በቀዝቃዛ የጤና መጠጦች፣ በከፍተኛ የኢትዮጵያ ቆዳ ስራዎች፣ በጥራት ምግቦች እና በተፈጥሮ ፀጉር እንክብካቤ ውስጥ እጅግ የላቀ የእጅ ስራን ይለማመዱ።",
-            "hero-cta-1": "ካታሎግ ያስሱ", "hero-cta-2": "ብራንዶቹን ይገናኙ",
-            "chip-lumina": "ሉሚና", "chip-puresip": "ፒውርሲፕ", "chip-leather": "አርቲዛን ሌዘር", "chip-earthoven": "ኤርት ኤንድ ኦቨን", "chip-elara": "ኤላራ ፀጉር",
-            "brands-title": "የብራንድ ፖርትፎሊዮአችን", "brands-sub": "አምስት ብራንዶች · አንድ የጥራት ፍልስፍና",
-            "b01-num": "01 / 05", "b01-name": "ሉሚና", "b01-tag": "መብራት · በቤተልሄም ጌታነህ የቀረበ",
-            "b01-desc": "በጥንቃቄ ዲዛይን እና ዘላቂነት ስሜትን መቅረጽ — ብርሃን ልምድ በሚሆንበት። ለዘመናዊ ውስጣዊ ክፍሎች የተሰሩ የስነ-ህንፃ መገልገያዎች።",
-            "b01-link": "ስብስብ ይመልከቱ →",
-            "b02-num": "02 / 05", "b02-name": "ፒውርሲፕ", "b02-tag": "የቀዝቃዛ ጭማቂ · reallygreatsip.com",
-            "b02-desc": "የሚያድስ የተፈጥሮ ጉዞ። 100% ኦርጋኒክ ፍራፍሬዎች፣ ምንም ተጨማሪ ነገር የለም።",
-            "b02-link": "ጭማቂዎችን ይመልከቱ →",
-            "b03-num": "03 / 05", "b03-name": "አርቲዛን ሌዘር", "b03-tag": "የቅንጦት እቃዎች · artisanleather.com",
-            "b03-desc": "በእያንዳንዱ የእጅ ስራ ዝርዝር ውስጥ የማይደራደር ጥራት። 100% ከፍተኛ የኢትዮጵያ ቆዳ።",
-            "b03-link": "እቃዎችን ይመልከቱ →",
-            "b04-num": "04 / 05", "b04-name": "ኤርት ኤንድ ኦቨን", "b04-tag": "ጎርሜ ምግቦች · ጎርሜ፣ በተፈጥሮ",
-            "b04-desc": "ፕሪሚየም የተቀነባበሩ ምግቦችን እንደገና መግለጽ። የእጅ ስራ ሾርባዎች፣ የፍራፍሬ መጠበቂያዎች።",
-            "b04-link": "ጎርሜ ይመልከቱ →",
-            "b05-num": "05 / 05", "b05-name": "ኤላራ ፀጉር", "b05-tag": "ተፈጥሯዊ የፀጉር እንክብካቤ · elarahair.com",
-            "b05-desc": "የኢትዮጵያ እፅዋት ወደ የቅንጦት የፀጉር ሥነ-ስርዓት የተለወጡ። የቀዝቃዛ ዘይቶች፣ የእፅዋት ሻምፑዎች።",
-            "b05-link": "የፀጉር እንክብካቤ ይመልከቱ →",
-            "cat-title": "ፕሪሚየም ካታሎግ", "cat-sub": "በሁሉም ብራንድ ውስጥ ያሉ ምርቶች",
-            "tab-all": "ሁሉም ምርቶች", "tab-lumina": "ሉሚና", "tab-puresip": "ፒውርሲፕ", "tab-leather": "አርቲዛን ሌዘር", "tab-earthoven": "ኤርት ኤንድ ኦቨን", "tab-elara": "ኤላራ ፀጉር",
-            "ab-title": "ስለ ፕሪሚየም ሀብታችን",
-            "ab-desc": "ይህ የትብብር መዋቅር ከፍተኛ ጥራት ያላቸውን ምርቶች በቀጥታ ወደ ከተማ ቦታዎች ለማድረስ የአቅርቦት አውታሮችን ያገናኛል።",
-            "ab-p1": "100% በሥነ-ምግባር የተገኘ", "ab-p2": "ለአካባቢ ተስማሚ", "ab-p3": "የእጅ ባለሙያ ተጠናክሯል",
-            "ab-p4": "ሀገር አቀፍ ስርጭት", "ab-p5": "ፕሪሚየም የተረጋገጠ",
-            "contact-title": "ያነጋግሩን", "contact-sub": "ዋና መጠይቅ ቢሮአችንን ያግኙ",
-            "contact-name": "ሙሉ ስም", "contact-email": "ኢሜይል አድራሻ", "contact-msg": "መልእክት",
-            "contact-send": "መልእክት ላክ",
-            "footer-brands": "ሉሚና · ፒውርሲፕ · አርቲዛን ሌዘር · ኤርት ኤንድ ኦቨን · ኤላራ ፀጉር",
-            "footer-copy": "© 2026 ፕሪሚየም ብራንዶች ስብስብ · ኢትዮጵያ · አምስት ልዩ ብራንዶች፣ አንድ መድረሻ"
-        }
-    };
-    let currentLang = localStorage.getItem('premium_lang') || 'en';
-
-    function applyLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem('premium_lang', lang);
-        document.getElementById('langBtn').textContent = lang === 'en' ? 'AM' : 'EN';
-        document.querySelectorAll('[data-lang]').forEach(el => {
-            const key = el.getAttribute('data-lang');
-            if (translations[lang] && translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
-            }
-        });
-    }
-
-    function switchLanguage() {
-        applyLanguage(currentLang === 'en' ? 'am' : 'en');
-    }
-
-    document.getElementById('langBtn').addEventListener('click', switchLanguage);
-
-    applyLanguage(currentLang);
-
-    /* ── AUTH ── */
-    const authBtn = document.getElementById('authBtn');
-    const authLabel = document.getElementById('authBtnLabel');
-    function updateAuthUI() {
-        const user = localStorage.getItem('premium_user');
-        if (user) {
-            authLabel.innerHTML = 'Hi, ' + user;
-        } else {
-            const lang = localStorage.getItem('premium_lang') || 'en';
-            authLabel.innerHTML = lang === 'en' ? 'Login' : 'ግባ';
-        }
-    }
-    authBtn.addEventListener('click', () => {
-        const user = localStorage.getItem('premium_user');
-        if (user) {
-            if (confirm('Logout ' + user + '?')) {
-                localStorage.removeItem('premium_user');
-                updateAuthUI();
-            }
-        } else {
-            const name = prompt('Enter your name:');
-            if (name && name.trim()) {
-                localStorage.setItem('premium_user', name.trim());
-                updateAuthUI();
-            }
-        }
-    });
-    updateAuthUI();
-
-    /* ── MOBILE NAV ── */
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    if (window.innerWidth <= 900) { hamburger.style.display = 'flex'; mobileNav.style.display = 'block'; }
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 900) { hamburger.style.display = 'flex'; mobileNav.style.display = 'block'; }
-        else { hamburger.style.display = 'none'; mobileNav.style.display = 'none'; }
-    });
-    // hide by default on mobile too
-    mobileNav.style.display = 'none';
-    hamburger.addEventListener('click', () => {
-        mobileNav.style.display = mobileNav.style.display === 'none' ? 'block' : 'none';
-    });
-    function closeMobile() { mobileNav.style.display = 'none'; }
+/* ── HEADER SCROLL ── */
+window.addEventListener('scroll', () => {
+  const h = document.querySelector('header');
+  h.style.background = window.scrollY > 50 ? 'rgba(13,12,10,0.97)' : 'rgba(13,12,10,0.88)';
+});
 </script>
-
 </body>
 </html>
