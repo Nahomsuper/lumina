@@ -591,6 +591,56 @@ nav a:hover::after { transform: scaleX(1); }
   text-transform: uppercase; color: var(--ash);
 }
 
+/* ── FAQ ── */
+.faq-section { background: var(--carbon); padding: 7rem 0; }
+.faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+.faq-item {
+  border-bottom: 1px solid rgba(196,154,69,0.1);
+  overflow: hidden;
+}
+.faq-item:first-child { border-top: 1px solid rgba(196,154,69,0.1); }
+.faq-q {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--parchment);
+  padding: 1.6rem 1.2rem 1.6rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--ember); }
+.faq-q i {
+  font-size: 0.7rem;
+  color: var(--ember);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.faq-item.open .faq-q i {
+  transform: rotate(180deg);
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 1.2rem 0 0;
+  font-size: 0.8rem;
+  color: var(--fog);
+  line-height: 1.85;
+}
+.faq-item.open .faq-a {
+  max-height: 300px;
+  padding: 0 1.2rem 1.6rem 0;
+}
+
 /* ── CONTACT ── */
 .contact-section { background: var(--carbon); padding: 7rem 0; }
 .contact-grid {
@@ -771,6 +821,7 @@ footer > p:last-child {
       <a href="#brands" data-lang="nav-brands">Brands</a>
       <a href="#catalog" data-lang="nav-catalog">Catalog</a>
       <a href="#stories" data-lang="nav-collection">Collection</a>
+      <a href="#faq" data-lang="nav-faq">FAQ</a>
       <a href="#contact" data-lang="nav-contact">Contact</a>
     </nav>
     <div class="header-actions">
@@ -791,6 +842,7 @@ footer > p:last-child {
   <a href="#brands" onclick="closeMobile()" data-lang="nav-brands">Brands</a>
   <a href="#catalog" onclick="closeMobile()" data-lang="nav-catalog">Catalog</a>
   <a href="#stories" onclick="closeMobile()" data-lang="nav-collection">Collection</a>
+  <a href="#faq" onclick="closeMobile()" data-lang="nav-faq">FAQ</a>
   <a href="#contact" onclick="closeMobile()" data-lang="nav-contact">Contact</a>
 </div>
 
@@ -1241,6 +1293,96 @@ footer > p:last-child {
   </div>
 </section>
 
+<!-- ═══ FAQ ═══ -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">FAQ</span>
+      <div class="gold-rule" style="max-width:300px;margin:0 auto 2rem;"><span data-lang="faq-rule">Frequently Asked</span></div>
+      <h2 data-lang="faq-title">Questions &amp; Answers</h2>
+      <p data-lang="faq-sub">Everything you need to know about our products</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-01q">What materials are used in Lumina lighting fixtures?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-01a">Lumina fixtures are crafted from hand-spun brass, frosted crystal diffusers, and premium-grade metals with a brushed or aged finish. Each component is selected for its light-transmission properties and durability, ensuring warm, directional illumination that lasts for years.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-02q">Are PureSip drinks pasteurized or raw?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-02a">PureSip juices are cold-pressed and flash-pasteurized at low temperatures to preserve maximum nutrient density while ensuring safety. No heat-degraded flavours, no additives, no preservatives. They retain the natural enzymes and vitamins found in fresh organic fruit.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-03q">How is Ethiopian leather different from other leathers?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-03a">Ethiopian top-grain leather is prized for its tight fibre structure, natural grain texture, and exceptional durability. Our Artisan Leather products use eco-safe vegetable-tanning processes that avoid heavy metals, resulting in a rich patina that develops character over years of use.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-04q">Are Earth &amp; Oven products gluten-free?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-04a">Yes, all Earth &amp; Oven sauces, preserves, and gourmet grains are certified gluten-free. Our kitchens maintain strict segregation protocols to prevent cross-contamination. Every batch is tested and labelled with full nutritional and allergen information.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-05q">Is Elara Hair suitable for all hair types?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-05a">Absolutely. Elara Hair products are formulated with gentle Ethiopian botanicals suitable for straight, wavy, curly, and coily textures. Our range includes sulphate-free shampoos, cold-pressed oils, and deep-conditioning masks that work beautifully on natural, relaxed, and colour-treated hair.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-06q">Do you offer international shipping?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-06a">Yes, we ship worldwide. Orders are dispatched from Addis Ababa within 2–3 business days. International delivery takes 7–14 business days depending on the destination. Shipping costs are calculated at checkout, and duties or taxes may apply based on your country's regulations.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-07q">What is your return policy?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-07a">We offer a 14-day return policy for unused and unopened products. For Lumina fixtures and Artisan Leather goods, you have 7 days after delivery to notify us of any defects or damage. Refunds are processed within 5–7 business days after we receive the returned item.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-08q">How long does delivery take within Ethiopia?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-08a">Within Addis Ababa, delivery takes 1–2 business days. For regional cities and towns, expect 3–5 business days via our partnered courier services. All orders above 2,000 ETB qualify for free domestic shipping.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-09q">Are your products ethically sourced?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-09a">Ethical sourcing is at our core. We work directly with small-scale Ethiopian farmers, artisans, and cooperatives, paying fair wages and supporting local communities. All raw materials — from shea butter to organic fruit — are traceable and sustainably harvested.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-10q">Can I order in bulk for wholesale?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-10a">Yes, we welcome wholesale and bulk orders. Volume discounts are available for PureSip juices, Earth &amp; Oven gourmet foods, and Elara Hair products. Please reach out through our contact form with your estimated quantity, and our team will send a custom quotation within 48 hours.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-11q">Do Lumina fixtures come with a warranty?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-11a">Every Lumina lighting fixture is backed by a 2-year manufacturer's warranty covering material defects and workmanship. The warranty excludes bulbs, normal wear, and damage from improper installation. Keep your purchase receipt for any warranty claims.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-12q">Are PureSip bottles recyclable?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-12a">Yes. PureSip uses 100% recyclable PET bottles and eco-friendly packaging. We encourage customers to rinse and recycle after use. We also offer a bottle-return programme in Addis Ababa — return 12 empty bottles and receive a discount on your next order.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-13q">How should I care for my Artisan Leather product?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-13a">Clean with a soft, dry cloth and condition every 3–4 months with a natural leather balm. Avoid prolonged exposure to direct sunlight or moisture. Store in the included dust bag when not in use. Proper care ensures your leather piece develops a beautiful, unique patina over time.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-14q">Do Earth &amp; Oven products contain preservatives?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-14a">No artificial preservatives, colours, or flavours are ever used. Our products rely on traditional preservation methods — natural acidity, vacuum sealing, and small-batch production. Once opened, refrigerate and consume within 7–10 days for the best taste and quality.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)"><span data-lang="faq-15q">Can I subscribe for regular deliveries?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-a" data-lang="faq-15a">Yes! PureSip and Earth &amp; Oven both offer flexible subscription plans — weekly, bi-weekly, or monthly. Subscribers enjoy 10–15% off each order, free delivery, and the ability to pause or cancel anytime. Manage your subscription easily through your account dashboard.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══ CONTACT ═══ -->
 <section id="contact" class="contact-section">
   <div class="container">
@@ -1385,7 +1527,7 @@ themeBtn.addEventListener('click', () => {
 const T = {
   en: {
     "logo-sub":"Five Exceptional Brands, One Destination",
-    "nav-home":"Home","nav-brands":"Brands","nav-catalog":"Catalog","nav-collection":"Collection","nav-contact":"Contact",
+    "nav-home":"Home","nav-brands":"Brands","nav-catalog":"Catalog","nav-collection":"Collection","nav-faq":"FAQ","nav-contact":"Contact",
     "auth-login":"Login",
     "cart-title":"Your Order","cart-empty":"Your basket is empty.","cart-total":"Total","cart-checkout":"Confirm Order",
     "hero-eyebrow":"Curated · Authentic · Ethiopian",
@@ -1404,6 +1546,37 @@ const T = {
     "ab-rule":"About","ab-title":"About Our Premium Hub",
     "ab-desc":"This collaborative architecture bridges supply networks to deliver high-integrity products straight to urban spaces. By employing modern manufacturing alongside small-scale artisanal workshops, each brand honours environmental best practices and authentic raw material sourcing across Ethiopia and beyond.",
     "ab-p1":"Ethically Sourced","ab-p2":"Eco Conscious","ab-p3":"Artisan Empowered","ab-p4":"Nationwide Distribution","ab-p5":"Premium Certified",
+    "faq-rule":"Frequently Asked","faq-title":"Questions & Answers","faq-sub":"Everything you need to know about our products",
+    "faq-01q":"What materials are used in Lumina lighting fixtures?",
+    "faq-01a":"Lumina fixtures are crafted from hand-spun brass, frosted crystal diffusers, and premium-grade metals with a brushed or aged finish. Each component is selected for its light-transmission properties and durability, ensuring warm, directional illumination that lasts for years.",
+    "faq-02q":"Are PureSip drinks pasteurized or raw?",
+    "faq-02a":"PureSip juices are cold-pressed and flash-pasteurized at low temperatures to preserve maximum nutrient density while ensuring safety. No heat-degraded flavours, no additives, no preservatives. They retain the natural enzymes and vitamins found in fresh organic fruit.",
+    "faq-03q":"How is Ethiopian leather different from other leathers?",
+    "faq-03a":"Ethiopian top-grain leather is prized for its tight fibre structure, natural grain texture, and exceptional durability. Our Artisan Leather products use eco-safe vegetable-tanning processes that avoid heavy metals, resulting in a rich patina that develops character over years of use.",
+    "faq-04q":"Are Earth & Oven products gluten-free?",
+    "faq-04a":"Yes, all Earth & Oven sauces, preserves, and gourmet grains are certified gluten-free. Our kitchens maintain strict segregation protocols to prevent cross-contamination. Every batch is tested and labelled with full nutritional and allergen information.",
+    "faq-05q":"Is Elara Hair suitable for all hair types?",
+    "faq-05a":"Absolutely. Elara Hair products are formulated with gentle Ethiopian botanicals suitable for straight, wavy, curly, and coily textures. Our range includes sulphate-free shampoos, cold-pressed oils, and deep-conditioning masks that work beautifully on natural, relaxed, and colour-treated hair.",
+    "faq-06q":"Do you offer international shipping?",
+    "faq-06a":"Yes, we ship worldwide. Orders are dispatched from Addis Ababa within 2–3 business days. International delivery takes 7–14 business days depending on the destination. Shipping costs are calculated at checkout, and duties or taxes may apply based on your country's regulations.",
+    "faq-07q":"What is your return policy?",
+    "faq-07a":"We offer a 14-day return policy for unused and unopened products. For Lumina fixtures and Artisan Leather goods, you have 7 days after delivery to notify us of any defects or damage. Refunds are processed within 5–7 business days after we receive the returned item.",
+    "faq-08q":"How long does delivery take within Ethiopia?",
+    "faq-08a":"Within Addis Ababa, delivery takes 1–2 business days. For regional cities and towns, expect 3–5 business days via our partnered courier services. All orders above 2,000 ETB qualify for free domestic shipping.",
+    "faq-09q":"Are your products ethically sourced?",
+    "faq-09a":"Ethical sourcing is at our core. We work directly with small-scale Ethiopian farmers, artisans, and cooperatives, paying fair wages and supporting local communities. All raw materials — from shea butter to organic fruit — are traceable and sustainably harvested.",
+    "faq-10q":"Can I order in bulk for wholesale?",
+    "faq-10a":"Yes, we welcome wholesale and bulk orders. Volume discounts are available for PureSip juices, Earth & Oven gourmet foods, and Elara Hair products. Please reach out through our contact form with your estimated quantity, and our team will send a custom quotation within 48 hours.",
+    "faq-11q":"Do Lumina fixtures come with a warranty?",
+    "faq-11a":"Every Lumina lighting fixture is backed by a 2-year manufacturer's warranty covering material defects and workmanship. The warranty excludes bulbs, normal wear, and damage from improper installation. Keep your purchase receipt for any warranty claims.",
+    "faq-12q":"Are PureSip bottles recyclable?",
+    "faq-12a":"Yes. PureSip uses 100% recyclable PET bottles and eco-friendly packaging. We encourage customers to rinse and recycle after use. We also offer a bottle-return programme in Addis Ababa — return 12 empty bottles and receive a discount on your next order.",
+    "faq-13q":"How should I care for my Artisan Leather product?",
+    "faq-13a":"Clean with a soft, dry cloth and condition every 3–4 months with a natural leather balm. Avoid prolonged exposure to direct sunlight or moisture. Store in the included dust bag when not in use. Proper care ensures your leather piece develops a beautiful, unique patina over time.",
+    "faq-14q":"Do Earth & Oven products contain preservatives?",
+    "faq-14a":"No artificial preservatives, colours, or flavours are ever used. Our products rely on traditional preservation methods — natural acidity, vacuum sealing, and small-batch production. Once opened, refrigerate and consume within 7–10 days for the best taste and quality.",
+    "faq-15q":"Can I subscribe for regular deliveries?",
+    "faq-15a":"Yes! PureSip and Earth & Oven both offer flexible subscription plans — weekly, bi-weekly, or monthly. Subscribers enjoy 10–15% off each order, free delivery, and the ability to pause or cancel anytime. Manage your subscription easily through your account dashboard.",
     "contact-rule":"Contact","contact-title":"Let's Connect","contact-sub":"Reach our master inquiry office",
     "contact-name":"Full Name","contact-email":"Email Address","contact-msg":"Message","contact-send":"Send Message",
     "footer-brands":"Lumina · PureSip · Artisan Leather · Earth & Oven · Elara Hair",
@@ -1411,7 +1584,7 @@ const T = {
   },
   am: {
     "logo-sub":"አምስት ልዩ ብራንዶች ፣ አንድ መድረሻ",
-    "nav-home":"መነሻ","nav-brands":"ብራንዶች","nav-catalog":"ካታሎግ","nav-collection":"ስብስብ","nav-contact":"ግንኙነት",
+    "nav-home":"መነሻ","nav-brands":"ብራንዶች","nav-catalog":"ካታሎግ","nav-collection":"ስብስብ","nav-faq":"FAQ","nav-contact":"ግንኙነት",
     "auth-login":"ግባ",
     "cart-title":"ትዕዛዝህ","cart-empty":"ቅርጫትህ ባዶ ነው።","cart-total":"ጠቅላላ","cart-checkout":"ትዕዛዝ አረጋግጥ",
     "hero-eyebrow":"የተመረጠ · እውነተኛ · ኢትዮጵያዊ",
@@ -1430,6 +1603,37 @@ const T = {
     "ab-rule":"ስለ እኛ","ab-title":"ስለ ፕሪሚየም ሀብታችን",
     "ab-desc":"ይህ የትብብር መዋቅር ከፍተኛ ጥራት ያላቸውን ምርቶች ወደ ከተማ ቦታዎች ያደርሳል። ዘመናዊ ምርትን ከትናንሽ የእጅ ሥራ አውደ ትምህርቶች ጋር በማጣመር።",
     "ab-p1":"ስነ-ምግባር ተሰብስቧል","ab-p2":"ለአካባቢ ተስማሚ","ab-p3":"የእጅ ባለሙያ ዕድገት","ab-p4":"ሀገር አቀፍ ስርጭት","ab-p5":"ፕሪሚየም የተረጋገጠ",
+    "faq-rule":"በተደጋጋሚ የሚጠየቁ","faq-title":"ጥያቄዎች እና መልሶች","faq-sub":"ስለ ምርቶቻችን ማወቅ ያለብዎት ነገር ሁሉ",
+    "faq-01q":"የሉሚና መብራት እቃዎች ምን ቁሳቁሶች ይጠቀማሉ?",
+    "faq-01a":"የሉሚና መብራቶች ከናስ፣ ከቀዘቀዘ ክሪስታል ዲፉዘር እና ከከፍተኛ ደረጃ ብረቶች የተሰሩ ናቸው። እያንዳንዱ ክፍል ለብርሃን ማስተላለፊያ ባህሪው እና ለረጅም ጊዜ የሚቆይ ሞቅ ያለ ብርሃን ለማቅረብ ተመርጧል።",
+    "faq-02q":"የፒውርሲፕ መጠጦች ፓስተር የተደረጉ ናቸው ወይስ ጥሬ?",
+    "faq-02a":"የፒውርሲፕ ጭማቂዎች በቅዝቃዜ የተጨመቁ እና በዝቅተኛ የሙቀት መጠን በፍጥነት ፓስተር የተደረጉ ናቸው። ምንም ተጨማሪ ነገር ወይም ኬሚካል የለም። በኦርጋኒክ ፍራፍሬ ውስጥ የሚገኙትን ተፈጥሯዊ ኢንዛይሞች እና ቪታሚኖች ይይዛሉ።",
+    "faq-03q":"የኢትዮጵያ ቆዳ ከሌሎች ቆዳዎች የሚለየው እንዴት ነው?",
+    "faq-03a":"የኢትዮጵያ ከፍተኛ የቆዳ ዓይነት በጠንካራ ፋይበር አወቃቀሩ፣ በተፈጥሮ ሸካራነቱ እና ልዩ ጥንካሬው ይታወቃል። የአርቲዛን ሌዘር ምርቶቻችን ከከባድ ብረቶች የራቁ ኢኮ-ደህና የአትክልት-ቆዳ ማቀነባበሪያ ሂደቶችን ይጠቀማሉ።",
+    "faq-04q":"የኤርት ኤንድ ኦቨን ምርቶች ከግሉተን ነጻ ናቸው?",
+    "faq-04a":"አዎ፣ ሁሉም የኤርት ኤንድ ኦቨን ምርቶች ከግሉተን ነጻ መሆናቸው የተረጋገጠ ነው። እያንዳንዱ ምርት ሙሉ የአመጋገብ እና አለርጂ መረጃ ተለጥፎለት ይመረመራል።",
+    "faq-05q":"የኤላራ ፀጉር ምርቶች ለሁሉም የፀጉር አይነቶች ተስማሚ ናቸው?",
+    "faq-05a":"ሙሉ በሙሉ። የኤላራ ፀጉር ምርቶች ለቀጥታ፣ ለማዕበል፣ ለኩርማ እና ለጥምጥም ፀጉር በሚሆን መልኩ ከኢትዮጵያ እፅዋት የተዘጋጁ ናቸው።",
+    "faq-06q":"አለም አቀፍ መላኪያ ታደርጋላችሁ?",
+    "faq-06a":"አዎ፣ በአለም ዙሪያ እናደርሳለን። ትዕዛዞች ከአዲስ አበባ የሚላኩት ከ2–3 የስራ ቀናት ውስጥ ነው። አለም አቀፍ መድረሻ 7–14 የስራ ቀናት ይወስዳል።",
+    "faq-07q":"የመመለሻ ፖሊሲዎ ምንድነው?",
+    "faq-07a":"ያልተከፈቱ ምርቶች ላይ የ14 ቀን የመመለሻ ፖሊሲ አለን። ለሉሚና እና ለአርቲዛን ሌዘር ምርቶች፣ ከደረሰ በኋላ ለ7 ቀናት የማሳወቅ ጊዜ አለ። ተመላሽ ገንዘብ የሚከናወነው ከ5–7 የስራ ቀናት ውስጥ ነው።",
+    "faq-08q":"በኢትዮጵያ ውስጥ ማድረስ ምን ያህል ጊዜ ይወስዳል?",
+    "faq-08a":"በአዲስ አበባ ውስጥ ማድረስ 1–2 የስራ ቀናት ይወስዳል። ለሌሎች ከተሞች 3–5 የስራ ቀናት ይጠብቁ። ከ2,000 ብር በላይ ትዕዛዞች ነጻ የሀገር ውስጥ መላኪያ ያገኛሉ።",
+    "faq-09q":"ምርቶቻችሁ በስነ-ምግባር የተገኙ ናቸው?",
+    "faq-09a":"ሥነ-ምግባራዊ ምንጭ ማግኛ ዋና እሴታችን ነው። ከኢትዮጵያ ገበሬዎች፣ የእጅ ባለሞያዎች እና ህብረት ስራ ማህበራት ጋር በቀጥታ እንሰራለን። ሁሉም ጥሬ ዕቃዎች ሊጠቀሱ የሚችሉ እና በዘላቂነት የተሰበሰቡ ናቸው።",
+    "faq-10q":"በጅምላ ማዘዝ እችላለሁ?",
+    "faq-10a":"አዎ፣ የጅምላ ትዕዛዞችን እንቀበላለን። ለፒውርሲፕ፣ ለኤርት ኤንድ ኦቨን እና ለኤላራ ፀጉር ምርቶች የብዛት ቅናሾች አሉ። በመገኛችን ቅጽ ያግኙን እና ቡድናችን በ48 ሰአታት ውስጥ ጥቅስ ይልክልዎታል።",
+    "faq-11q":"የሉሚና መብራቶች ዋስትና አላቸው?",
+    "faq-11a":"እያንዳንዱ የሉሚና መብራት የ2-አመት ዋስትና አለው። ዋስትናው አምፖሎችን፣ መደበኛ ልባስን እና ተገቢ ባልሆነ መትከል ምክንያት የሚደርስ ጉዳትን አይሸፍንም።",
+    "faq-12q":"የፒውርሲፕ ጠርሙሶች እንደገና ጥቅም ላይ ሊውሉ ይችላሉ?",
+    "faq-12a":"አዎ። ፒውርሲፕ 100% እንደገና ጥቅም ላይ ሊውሉ የሚችሉ ፒኢቲ ጠርሙሶችን ይጠቀማል። በአዲስ አበባ የጠርሙስ-መመለሻ ፕሮግራም አለን — 12 ባዶ ጠርሙሶችን መልሰው በሚቀጥለው ትዕዛዝ ቅናሽ ያግኙ።",
+    "faq-13q":"የአርቲዛን ሌዘር ምርቴን እንዴት መንከባከብ አለብኝ?",
+    "faq-13a":"ለስላሳ ደረቅ ጨርቅ ያፅዱ እና በየ3–4 ወሩ በተፈጥሮ የቆዳ ቅባት ያጠሩ። ከፀሐይ ብርሃን ወይም እርጥበት ያስወግዱ። በተካተተው የአቧራ ከረጢት ውስጥ ያከማቹ። ትክክለኛ እንክብካቤ የቆዳ ምርትዎ ውብ መልክ እንዲያድግ ያደርጋል።",
+    "faq-14q":"የኤርት ኤንድ ኦቨን ምርቶች ማቆያ ይይዛሉ?",
+    "faq-14a":"ሰው ሰራሽ ማቆያ፣ ቀለሞች ወይም ጣዕሞች በጭራሽ አይጠቀሙም። ምርቶቻችን በባህላዊ የማቆያ ዘዴዎች ላይ ይተማመናሉ — የተፈጥሮ አሲድ፣ የቫክዩም መዘጋት እና አነስተኛ ምርት። ከተከፈተ በኋላ በማቀዝቀዣ ውስጥ ያኑሩ እና በ7–10 ቀናት ውስጥ ይጠቀሙ።",
+    "faq-15q":"መደበኛ ማድረስ ለማግኘት መመዝገብ እችላለሁ?",
+    "faq-15a":"አዎ! ፒውርሲፕ እና ኤርት ኤንድ ኦቨን ተለዋዋጭ የደንበኝነት ምዝገባ ይሰጣሉ — ሳምንታዊ፣ በየሁለት ሳምንቱ ወይም ወርሃዊ። ተመዝጋቢዎች በእያንዳንዱ ትዕዛዝ 10–15% ቅናሽ፣ ነጻ ማድረስ እና በማንኛውም ጊዜ ማቆም ወይም መሰረዝ ይችላሉ።",
     "contact-rule":"ግንኙነት","contact-title":"ያነጋግሩን","contact-sub":"ዋና መጠይቅ ቢሮአችንን ያግኙ",
     "contact-name":"ሙሉ ስም","contact-email":"ኢሜይል አድራሻ","contact-msg":"መልእክት","contact-send":"መልእክት ላክ",
     "footer-brands":"ሉሚና · ፒውርሲፕ · አርቲዛን ሌዘር · ኤርት ኤንድ ኦቨን · ኤላራ ፀጉር",
@@ -1449,6 +1653,14 @@ function applyLang(l) {
 }
 document.getElementById('langBtn').addEventListener('click', () => applyLang(lang === 'en' ? 'am' : 'en'));
 applyLang(lang);
+
+/* ── FAQ TOGGLE ── */
+function toggleFAQ(btn) {
+  const item = btn.parentElement;
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!open) item.classList.add('open');
+}
 
 /* ── AUTH ── */
 function updateAuth() {
